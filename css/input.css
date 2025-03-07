@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #021742;
+  --secondary: #ee2a7b;
+  --tertiary: #ffd51e;
+  --alt: #5dbb46;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: local("Helvetica"), url("../fonts/Helvetica.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: local("Helvetica Bold"),
+    url("../fonts/Helvetica-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: local("Helvetica Bold Oblique"),
+    url("../fonts/Helvetica-BoldOblique.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: local("Helvetica Light"),
+    url("../fonts/helvetica-light-587ebe5a59211.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: local("Helvetica Oblique"),
+    url("../fonts/Helvetica-Oblique.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Helvetica Rounded";
+  src: local("Helvetica Rounded Bold"),
+    url("../fonts/helvetica-rounded-bold-5871d05ead8de.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Compressed";
+  src: local("Helvetica Compressed"),
+    url("../fonts/helvetica-compressed-5871d14b6903a.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Helvetica" !important;
+  font-size: 1.15rem;
+  scroll-behavior: smooth;
+}
+
+.bg-banner {
+  background: transparent url(../img/bg-banner.jpg) fixed no-repeat center /
+    cover;
+}
+
+@layer components {
+  .btn-primary {
+    @apply w-full md:max-w-3xl md:min-w-3xs bg-[var(--primary)] rounded-full px-14 py-2 text-white font-bold transition-all hover:opacity-90 hover:scale-110 cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply w-full md:max-w-3xl md:min-w-3xs bg-[var(--secondary)] rounded-full px-14 py-2 text-white font-bold transition-all hover:opacity-90 hover:scale-110 cursor-pointer;
+  }
+
+  .btn-tertiary {
+    @apply w-full md:max-w-3xl md:min-w-3xs bg-[var(--tertiary)] rounded-full px-14 py-2 text-white font-bold transition-all hover:opacity-90 hover:scale-110 cursor-pointer;
+  }
+
+  .btn-alt {
+    @apply w-full md:max-w-3xl md:min-w-3xs bg-[var(--alt)] rounded-full px-14 py-2 text-white font-bold transition-all hover:opacity-90 hover:scale-110 cursor-pointer;
+  }
+}
+
+.floating-image {
+  -webkit-animation-name: imaheder; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  animation-name: imaheder;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes imaheder {
+  0% {
+    bottom: -0.5em;
+  }
+  50% {
+    bottom: 0.5em;
+  }
+  100% {
+    bottom: -0.5em;
+  }
+}
+/* Standard syntax */
+@keyframes imaheder {
+  0% {
+    bottom: -0.5em;
+  }
+  50% {
+    bottom: 0.5em;
+  }
+  100% {
+    bottom: -0.5em;
+  }
+}

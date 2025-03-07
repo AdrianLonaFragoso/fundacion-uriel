@@ -1,31 +1,638 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página en Construcción</title>
-    <style>
-      body {
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: yellow;
-        font-family: Arial, sans-serif;
-        color: black;
-        text-align: center;
-      }
-      h1 {
-        font-size: 3rem;
-        font-weight: bold;
-      }
-    </style>
+    <title>Fundación Uriel</title>
+    <link href="./css/output.css" rel="stylesheet" />
   </head>
   <body>
-    <div>
-      <img src="img/logo-uriel-trans.png" width="200" alt="" />
-      <h1>🚧 Página en Construcción 🚧</h1>
+    <div class="container mx-auto flex justify-center lg:justify-start py-5">
+      <img
+        src="./img/logo-head.svg"
+        class="w-[100px]"
+        alt="Logo fundación uriel"
+      />
     </div>
+
+    <header class="flex flex-col sticky top-0 bg-white z-10">
+      <div class="bg-[var(--primary)]">
+        <nav class="text-white w-full container mx-auto py-5 flex">
+          <i class="fas fa-bars ml-5 lg:!hidden" onclick="openSidenav()"></i>
+
+          <div
+            id="sidenav"
+            class="ml-auto fixed lg:relative top-0 -left-80 lg:left-auto w-80 h-full lg:h-fit lg:w-fit bg-[var(--primary)] md:flex shadow-2xl lg:shadow-none p-4 lg:p-0 z-20 transition-all"
+          >
+            <i
+              class="fas fa-times absolute right-4 top-4 flex lg:hidden"
+              onclick="closeSidenav()"
+            ></i>
+
+            <img
+              src="../img/logo-fundacion-uriel-white.svg"
+              alt=""
+              class="w-3xs lg:hidden"
+            />
+
+            <ul class="flex flex-col md:flex-row gap-x-5">
+              <li class="p-3 md:p-0">
+                <a href="index.html#top" onclick="closeSidenav()"> Inicio </a>
+              </li>
+              <li class="p-3 md:p-0">
+                <a href="index.html#about" onclick="closeSidenav()">
+                  Acerca de nosotros
+                </a>
+              </li>
+              <li class="p-3 md:p-0">
+                <a href="index.html#products" onclick="closeSidenav()">
+                  Productos y servicios
+                </a>
+              </li>
+              <li class="p-3 md:p-0">
+                <a href="index.html#rewards" onclick="closeSidenav()">
+                  Reconocimientos
+                </a>
+              </li>
+              <li class="p-3 md:p-0">
+                <a href="index.html#labor" onclick="closeSidenav()">
+                  Nuestra Labor
+                </a>
+              </li>
+              <li class="p-3 md:p-0">
+                <a href="index.html#contact" onclick="closeSidenav()">
+                  Contacto
+                </a>
+              </li>
+              <li class="relative mx-10 hidden lg:flex">
+                <button
+                  class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-[var(--secondary)] text-white rounded-full flex items-center justify-center p-5 hover:cursor-pointer hover:scale-110 transition-all"
+                >
+                  Donar
+                </button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main
+      class="flex flex-col lg:flex-row lg:h-[calc(100vh-150px)] lg:min-h-[calc(100vh-150px)] items-center justify-center bg-banner pt-20 lg:pt-0"
+    >
+      <div
+        class="w-full md:w-1/2 flex items-end h-full justify-end order-2 lg:order-1"
+      >
+        <img src="img/img-banner-1.png" alt="" />
+      </div>
+
+      <div
+        class="w-full md:w-1/2 text-center flex flex-col justify-center items-center h-full order-1 lg:order-2"
+      >
+        <img src="img/logo-head.svg" alt="" class="w-[300px]" />
+
+        <p class="my-10 px-10 lg:px-0">
+          En México, más de 64,000 niños sufren quemaduras cada año, enfrentando
+          cicatrices físicas y emocionales que transforman sus vidas. Con tu
+          apoyo, podemos prevenir accidentes, educar comunidades y brindar
+          atención integral para devolverles la esperanza.
+        </p>
+
+        <h2 class="text-4xl font-bold">Para niños con quemaduras</h2>
+
+        <button
+          class="rounded-full bg-[var(--tertiary)] py-2 px-10 font-bold my-10"
+        >
+          Conócenos
+        </button>
+      </div>
+    </main>
+
+    <!-- DIVIDER -->
+    <div class="bg-[var(--primary)] w-full h-4"></div>
+
+    <section id="about" class="relative lg:h-screen pt-20 pb-0 lg:py-0">
+      <div class="flex h-full flex-col lg:flex-row z-10">
+        <div
+          class="w-full lg:w-6/12 h-full flex items-end justify-end order-2 lg:order-1"
+        >
+          <img src="./img/acerca-de-fundacion-uriel.png" class="" alt="" />
+        </div>
+
+        <div
+          class="w-full lg:w-5/12 h-full flex flex-col items-end justify-center px-10 lg:px-0 order-1 lg:order-2"
+        >
+          <div class="flex items-center">
+            <h1
+              class="text-right text-[var(--secondary)] text-4xl lg:text-6xl font-bold leading-7 lg:leading-14 mr-4"
+            >
+              <small
+                class="text-[var(--primary)] text-2xl lg:text-4xl font-normal"
+                >Acerca de</small
+              >
+              <br />
+              Fundación Uriel
+            </h1>
+
+            <img
+              src="./img/flower.svg"
+              class="w-10 lg:w-auto top-1 relative"
+              alt=""
+            />
+          </div>
+
+          <p class="text-justify mt-10">
+            Somos una institución de asistencia privada dedicada a atender y
+            prevenir las quemaduras en niños y adolescentes. Nuestro compromiso
+            incluye proporcionar tratamiento especializado, fomentar la
+            educación preventiva y colaborar con instituciones internacionales
+            para maximizar el impacto de nuestras acciones.
+          </p>
+
+          <p class="text-justify my-10">
+            Desde nuestro reconocimiento como donataria autorizada hasta nuestro
+            estatus consultivo ante la ONU, trabajamos con pasión para mejorar
+            la calidad de vida de los más vulnerables.
+          </p>
+
+          <div
+            class="flex flex-col lg:flex-row justify-start gap-4 lg:gap-10 w-full"
+          >
+            <button class="btn-alt">
+              <i class="fas fa-plus"></i> Necesito ayuda
+            </button>
+            <button class="btn-secondary">
+              <i class="far fa-heart"></i> Donar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <img
+        src="./img/cloud.png"
+        alt=""
+        class="bottom-0 right-0 -z-10 w-[500px] absolute floating-image"
+      />
+    </section>
+
+    <!-- DIVIDER -->
+    <div class="bg-[var(--primary)] w-full h-4"></div>
+
+    <section
+      id="services"
+      class="relative lg:h-screen pt-20 pb-0 lg:py-0 hidden"
+    >
+      <div class="flex h-full flex-col lg:flex-row z-10">
+        <div
+          class="w-full lg:w-5/12 h-full flex flex-col items-end justify-center px-10 lg:px-0"
+        >
+          <div class="flex items-center">
+            <h1
+              class="text-right text-[var(--secondary)] text-4xl lg:text-6xl font-bold leading-7 lg:leading-14 mr-4"
+            >
+              <small
+                class="text-[var(--primary)] text-2xl lg:text-4xl font-normal"
+                >Nuestros</small
+              >
+              <br />
+              Programas y Servicios
+            </h1>
+
+            <img
+              src="./img/flower.svg"
+              class="w-10 lg:w-auto top-1 relative"
+              alt=""
+            />
+          </div>
+
+          <p class="text-justify mt-10">
+            Somos una institución de asistencia privada dedicada a atender y
+            prevenir las quemaduras en niños y adolescentes. Nuestro compromiso
+            incluye proporcionar tratamiento especializado, fomentar la
+            educación preventiva y colaborar con instituciones internacionales
+            para maximizar el impacto de nuestras acciones.
+          </p>
+
+          <p class="text-justify my-10">
+            Desde nuestro reconocimiento como donataria autorizada hasta nuestro
+            estatus consultivo ante la ONU, trabajamos con pasión para mejorar
+            la calidad de vida de los más vulnerables.
+          </p>
+
+          <div
+            class="flex flex-col lg:flex-row justify-start gap-4 lg:gap-10 w-full"
+          >
+            <button class="btn-alt">
+              <i class="fas fa-plus"></i> Necesito ayuda
+            </button>
+            <button class="btn-secondary">
+              <i class="far fa-heart"></i> Donar
+            </button>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-6/12 h-full flex items-end justify-end">
+          <img src="./img/acerca-de-fundacion-uriel.png" class="" alt="" />
+        </div>
+      </div>
+
+      <img
+        src="./img/cloud.png"
+        alt=""
+        class="bottom-0 right-0 -z-10 w-[500px] absolute floating-image"
+      />
+    </section>
+
+    <!-- DIVIDER -->
+    <div class="bg-[var(--primary)] w-full h-4"></div>
+
+    <section id="reward" class="relative lg:h-screen pt-20 pb-0 lg:py-0">
+      <div class="flex h-full flex-col lg:flex-row z-10">
+        <div
+          class="w-full lg:w-6/12 h-full flex items-end justify-end order-2 lg:order-1"
+        >
+          <img src="./img/altamente-reconocida.png" class="" alt="" />
+        </div>
+
+        <div
+          class="w-full lg:w-5/12 h-full flex flex-col items-start justify-center px-10 lg:px-0 order-1 lg:order-2"
+        >
+          <div class="flex items-center">
+            <img
+              src="./img/flower.svg"
+              class="w-10 lg:w-auto top-1 relative"
+              alt=""
+            />
+
+            <h1
+              class="text-left text-[var(--secondary)] text-4xl lg:text-6xl font-bold leading-7 lg:leading-14 mr-4"
+            >
+              <small
+                class="text-[var(--primary)] text-2xl lg:text-4xl font-normal"
+                >Altamente</small
+              >
+              <br />
+              Reconocida
+            </h1>
+          </div>
+
+          <p class="mt-10">
+            Nuestra labor ha sido reconocida a nivel nacional e internacional:
+          </p>
+
+          <ul class="list-none space-y-2 relative mt-5">
+            <li
+              class="flex items-start before:content-[''] before:w-5 before:h-5 before:bg-[url('/img/bullet.svg')] before:bg-contain before:bg-no-repeat before:mr-2 before:flex-shrink-0 before:relative before:top-2"
+            >
+              <p>
+                <b>Premio Estatal de Altruismo 2022:</b>
+                Otorgado por el Gobierno del Estado de México.
+              </p>
+            </li>
+            <li
+              class="flex items-start before:content-[''] before:w-5 before:h-5 before:bg-[url('/img/bullet.svg')] before:bg-contain before:bg-no-repeat before:mr-2 before:flex-shrink-0 before:relative before:top-2"
+            >
+              <p>
+                <b>Estatus Consultivo de la ONU (2023): </b>
+                <br />Posicionándonos entre las 64 organizaciones mexicanas con
+                este prestigioso reconocimiento.
+              </p>
+            </li>
+            <li
+              class="flex items-start before:content-[''] before:w-5 before:h-5 before:bg-[url('/img/bullet.svg')] before:bg-contain before:bg-no-repeat before:mr-2 before:flex-shrink-0 before:relative before:top-2"
+            >
+              <p>
+                <b> Medalla Gustavo Baz Prada:</b> <br />
+                Reconocimiento de la UNAM por nuestra dedicación altruista.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <img
+        src="./img/cloud.png"
+        alt=""
+        class="bottom-0 right-0 -z-10 w-[500px] absolute floating-image"
+      />
+    </section>
+
+    <!-- DIVIDER -->
+    <div class="bg-[var(--primary)] w-full h-4"></div>
+
+    <section id="labor" class="relative lg:h-screen pt-20 pb-0 lg:py-0">
+      <div class="flex h-full flex-col lg:flex-row lg:justify-end z-10">
+        <div
+          class="w-full lg:w-5/12 h-full flex flex-col items-start justify-center px-10 lg:px-0"
+        >
+          <div class="flex items-center">
+            <img
+              src="./img/flower.svg"
+              class="w-10 lg:w-auto top-1 relative"
+              alt=""
+            />
+            <h1
+              class="text-left text-[var(--secondary)] text-4xl lg:text-6xl font-bold leading-7 lg:leading-14 mr-4"
+            >
+              <small
+                class="text-[var(--primary)] text-2xl lg:text-4xl font-normal"
+                >La labor de</small
+              >
+              <br />
+              Fundación Uriel
+            </h1>
+          </div>
+
+          <p class="text-justify mt-10">
+            En Fundación Uriel, nuestra misión es ofrecer atención integral a
+            niños, niñas y adolescentes que sufren quemaduras o sus secuelas.
+            Además, trabajamos incansablemente en programas de
+            prevención y capacitación, para evitar que más familias atraviesen
+            por el dolor y los riesgos de estas lesiones.
+          </p>
+
+          <p class="text-justify my-10">
+            Nuestra organización no solo brinda atención médica especializada,
+            sino que también se enfoca en canalizar a los pacientes a
+            instituciones especializadas en México o en el extranjero,
+            proporcionando la atención necesaria para una pronta recuperación. A
+            lo largo de nuestra trayectoria, hemos impactado positivamente a más
+            de 146 pacientes y beneficiado a más de 23,000 personas con nuestros
+            programas de prevención.
+          </p>
+
+          <div
+            class="flex flex-col lg:flex-row justify-start gap-4 lg:gap-10 w-full"
+          >
+            <button class="btn-secondary max-w-[20rem]">
+              <i class="fas fa-praying-hands"></i> Quiero apoyar
+            </button>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-6/12 h-full flex items-end justify-end">
+          <img src="./img/labor-fundacion-uriel.png" class="" alt="" />
+        </div>
+      </div>
+
+      <img
+        src="./img/cloud.png"
+        alt=""
+        class="bottom-0 left-0 -z-10 w-[500px] absolute floating-image scale-x-[-1]"
+      />
+    </section>
+
+    <!-- DIVIDER -->
+    <div class="bg-[var(--primary)] w-full h-4"></div>
+
+    <section id="international" class="relative pt-20 pb-0 lg:pt-20">
+      <div class="flex h-full flex-col lg:flex-row z-10 gap-x-20">
+        <div
+          class="w-full lg:w-6/12 h-full flex items-end justify-end order-2 lg:order-1 lg:min-h-[53rem]"
+        >
+          <img src="./img/fundacion-uriel-internacional.png" class="" alt="" />
+        </div>
+
+        <div
+          class="w-full lg:w-5/12 h-full flex flex-col items-start justify-center px-10 lg:px-0 order-1 lg:order-2"
+        >
+          <div class="flex items-center">
+            <img
+              src="./img/flower.svg"
+              class="w-10 lg:w-auto top-1 relative"
+              alt=""
+            />
+
+            <h1
+              class="text-left text-[var(--secondary)] text-4xl lg:text-6xl font-bold leading-7 lg:leading-14 mr-4"
+            >
+              <small
+                class="text-[var(--primary)] text-2xl lg:text-4xl font-normal"
+                >Fundacion Uriel</small
+              >
+              <br />
+              Internacional
+            </h1>
+          </div>
+
+          <p class="mt-10 text-justify mb-5">
+            Gracias al Estatus Consultivo ante la ONU, la Fundación Uriel
+            impulsa un programa internacional que nos permite colaborar con
+            organismos, hospitales y especialistas de diferentes países para
+            mejorar la atención y rehabilitación de personas con quemaduras.
+          </p>
+
+          <p class="font-bold mb-5">A través de esta iniciativa:</p>
+
+          <p class="text-justify mb-5">
+            Canalizamos a pacientes con secuelas graves a centros especializados
+            en México y el extranjero, asegurando acceso a tratamientos
+            avanzados.
+          </p>
+
+          <p class="text-justify mb-5">
+            Colaboramos con expertos internacionales para la capacitación de
+            profesionales de la salud en nuevas técnicas de recuperación y
+            manejo de quemaduras. Participamos en foros globales y comités
+            especializados, contribuyendo con nuestra experiencia y promoviendo
+            políticas públicas que fortalezcan la prevención y atención de
+            quemaduras.
+          </p>
+
+          <p class="text-justify mb-5">
+            Desarrollamos alianzas con organizaciones internacionales para
+            ampliar el impacto de nuestros programas y garantizar una atención
+            integral.
+          </p>
+
+          <p class="text-justify mb-5">
+            Este programa refuerza nuestro compromiso de brindar soluciones
+            innovadoras y mejorar la calidad de vida de quienes han sufrido
+            quemaduras, trascendiendo fronteras con un enfoque humano y
+            especializado.
+          </p>
+        </div>
+      </div>
+
+      <img
+        src="./img/cloud.png"
+        alt=""
+        class="bottom-0 right-0 -z-10 w-[500px] absolute floating-image"
+      />
+    </section>
+
+    <!-- DIVIDER -->
+    <div class="bg-[var(--primary)] w-full h-4"></div>
+
+    <section id="contacto" class="relative pt-20 pb-0 lg:pt-20">
+      <div class="flex h-full flex-col lg:flex-row z-10 gap-x-20">
+        <div
+          class="w-full lg:w-6/12 h-full flex items-end justify-end order-2 lg:order-1 lg:min-h-[53rem]"
+        >
+          <img src="./img/contactanos.png" class="" alt="" />
+        </div>
+
+        <div
+          class="w-full lg:w-4/12 h-full flex flex-col items-start justify-center px-10 lg:px-0 order-1 lg:order-2"
+        >
+          <div class="flex items-center">
+            <img
+              src="./img/flower.svg"
+              class="w-10 lg:w-auto top-0 relative"
+              alt=""
+            />
+
+            <h1
+              class="text-left text-[var(--secondary)] text-4xl lg:text-6xl font-bold leading-7 lg:leading-7 ml-4"
+            >
+              Contáctanos
+              <br />
+              <small
+                class="text-[var(--primary)] text-base lg:text-xl font-normal"
+                >Eres muy importante para nosotros</small
+              >
+            </h1>
+          </div>
+
+          <form class="w-full mt-10 flex flex-col gap-y-6" action="">
+            <div
+              class="relative w-full before:content-[''] before:absolute before:bg-gray-200 before:h-full before:w-full before:-z-10 before:rounded-full before:-bottom-2 before:-right-2 hover:scale-110 transition-all"
+            >
+              <input
+                type="text"
+                class="rounded-full border border-gray-300 px-10 py-3 bg-white w-full"
+                placeholder="Nombre"
+              />
+            </div>
+
+            <div
+              class="relative w-full before:content-[''] before:absolute before:bg-gray-200 before:h-full before:w-full before:-z-10 before:rounded-full before:-bottom-2 before:-right-2 hover:scale-110 transition-all"
+            >
+              <input
+                type="phone"
+                class="rounded-full border border-gray-300 px-10 py-3 bg-white w-full"
+                placeholder="Télefono"
+              />
+            </div>
+
+            <div
+              class="relative w-full before:content-[''] before:absolute before:bg-gray-200 before:h-full before:w-full before:-z-10 before:rounded-full before:-bottom-2 before:-right-2 hover:scale-110 transition-all"
+            >
+              <input
+                type="email"
+                class="rounded-full border border-gray-300 px-10 py-3 bg-white w-full"
+                placeholder="Email"
+              />
+            </div>
+
+            <div
+              class="relative w-full before:content-[''] before:absolute before:bg-gray-200 before:h-full before:w-full before:-z-10 before:rounded-xl before:-bottom-2 before:-right-2 hover:scale-110 transition-all"
+            >
+              <textarea
+                rows="5"
+                class="rounded-xl border border-gray-300 px-10 py-3 bg-white w-full"
+                placeholder="Déjanos un mensaje"
+              ></textarea>
+            </div>
+
+            <div
+              class="relative w-full before:content-[''] before:absolute before:bg-gray-200 before:h-full before:w-full before:-z-10 before:rounded-full before:-bottom-2 before:-right-2 hover:scale-110 transition-all"
+            >
+              <button class="btn-secondary p-5 cursor-pointer">
+                Enviar mensaje
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <img
+        src="./img/cloud.png"
+        alt=""
+        class="bottom-0 right-0 -z-10 w-[500px] absolute floating-image"
+      />
+    </section>
+
+    <footer id="footer" class="bg-[var(--primary)] text-white relative pt-20">
+      <div
+        class="container mx-auto flex flex-col lg:flex-row justify-center gap-20"
+      >
+        <div
+          class="w-full lg:w-5/12 flex justify-center flex-col px-10 lg:px-0"
+        >
+          <img
+            src="../img/logo-fundacion-uriel-white.svg"
+            class="w-8/12 mb-5"
+            alt=""
+          />
+
+          <p class="text-justify text-base">
+            En Fundación Uriel, trabajamos todos los días
+            para prevenir y combatir las quemaduras, protegiendo la salud y el
+            bienestar de los más pequeños. Gracias a la colaboración de aliados
+            y la solidaridad de quienes nos apoyan, seguimos dando pasos hacia
+            un futuro más seguro y libre de quemaduras.
+          </p>
+        </div>
+
+        <div class="w-full lg:w-5/12 text-base px-10 lg:px-0">
+          <p class="mb-4"><b>Síguenos en :</b></p>
+
+          <div class="flex gap-5 mb-4">
+            <a
+              href="https://www.facebook.com/Fundacionquemaduras"
+              target="_blank"
+            >
+              <img src="../img/facebook.png" alt="" />
+            </a>
+            <a
+              href="https://www.instagram.com/urieliap?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank"
+            >
+              <img src="../img/instagram.png" alt="" />
+            </a>
+
+            <a href="https://x.com/URIELIAP">
+              <img src="../img/x.png" alt="" />
+            </a>
+          </div>
+
+          <p class="mb-4">
+            <b> Dirección:</b> <br />
+            Trompeleros 231, Villa de las Flores, Coacalco, Estado de México,
+            C.P. 55710
+          </p>
+
+          <p>
+            <b>Teléfono:</b> <br />
+            55 1234 5678
+          </p>
+
+          <p>
+            <b>Correo: </b> <br />
+            contacto@fundacionuriel.org
+          </p>
+        </div>
+      </div>
+      <div>
+        <p class="bg-[#485683] p-3 text-center text-sm mt-10">
+          Todos los derechos reservados Fundación Uriel 2025
+        </p>
+      </div>
+    </footer>
+
+    <a
+      id="btnUp"
+      href="#top"
+      class="hidden fixed bottom-4 right-4 bg-[var(--secondary)] text-white px-4 py-2 rounded-full shadow-lg hover:bg-pink-600 transition"
+    >
+      <i class="fas fa-angle-double-up"></i>
+    </a>
+
+    <script
+      src="https://kit.fontawesome.com/a397555a77.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
