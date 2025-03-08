@@ -8,11 +8,13 @@
   </head>
   <body>
     <div class="container mx-auto flex justify-center lg:justify-start py-5">
-      <img
-        src="./img/logo-head.svg"
-        class="w-[100px]"
-        alt="Logo fundación uriel"
-      />
+      <a href="index.html#top">
+        <img
+          src="./img/logo-head.svg"
+          class="w-[100px]"
+          alt="Logo fundación uriel"
+        />
+      </a>
     </div>
 
     <header class="flex flex-col sticky top-0 bg-white z-10">
@@ -40,17 +42,17 @@
                 <a href="index.html#top" onclick="closeSidenav()"> Inicio </a>
               </li>
               <li class="p-3 md:p-0">
-                <a href="index.html#about" onclick="closeSidenav()">
-                  Acerca de nosotros
+                <a href="index.html#acerca" onclick="closeSidenav()">
+                  Nosotros
                 </a>
               </li>
               <li class="p-3 md:p-0">
-                <a href="index.html#products" onclick="closeSidenav()">
-                  Productos y servicios
+                <a href="index.html#servicios" onclick="closeSidenav()">
+                  Servicios
                 </a>
               </li>
               <li class="p-3 md:p-0">
-                <a href="index.html#rewards" onclick="closeSidenav()">
+                <a href="index.html#reconocimientos" onclick="closeSidenav()">
                   Reconocimientos
                 </a>
               </li>
@@ -60,7 +62,17 @@
                 </a>
               </li>
               <li class="p-3 md:p-0">
-                <a href="index.html#contact" onclick="closeSidenav()">
+                <a href="index.html#internacional" onclick="closeSidenav()">
+                  internacional
+                </a>
+              </li>
+              <li class="p-3 md:p-0">
+                <a href="cursos-y-tutoriales.html" onclick="closeSidenav()">
+                  Cursos y tutoriales
+                </a>
+              </li>
+              <li class="p-3 md:p-0">
+                <a href="index.html#contacto" onclick="closeSidenav()">
                   Contacto
                 </a>
               </li>
@@ -111,7 +123,7 @@
     <!-- DIVIDER -->
     <div class="bg-[var(--primary)] w-full h-4"></div>
 
-    <section id="about" class="relative lg:h-screen pt-20 pb-0 lg:py-0">
+    <section id="acerca" class="relative lg:h-screen pt-20 pb-0 lg:py-0">
       <div class="flex h-full flex-col lg:flex-row z-10">
         <div
           class="w-full lg:w-6/12 h-full flex items-end justify-end order-2 lg:order-1"
@@ -158,9 +170,10 @@
           <div
             class="flex flex-col lg:flex-row justify-start gap-4 lg:gap-10 w-full"
           >
-            <button class="btn-alt">
-              <i class="fas fa-plus"></i> Necesito ayuda
-            </button>
+            <a href="quienes-somos.html" class="btn-alt">
+              <!-- <i class="fas fa-plus"></i>  -->
+              ¿Quienes sómos?
+            </a>
             <button class="btn-secondary">
               <i class="far fa-heart"></i> Donar
             </button>
@@ -179,7 +192,7 @@
     <div class="bg-[var(--primary)] w-full h-4"></div>
 
     <section
-      id="services"
+      id="servicios"
       class="relative lg:h-screen pt-20 pb-0 lg:py-0 hidden"
     >
       <div class="flex h-full flex-col lg:flex-row z-10">
@@ -246,7 +259,10 @@
     <!-- DIVIDER -->
     <div class="bg-[var(--primary)] w-full h-4"></div>
 
-    <section id="reward" class="relative lg:h-screen pt-20 pb-0 lg:py-0">
+    <section
+      id="reconocimientos"
+      class="relative lg:h-screen pt-20 pb-0 lg:py-0"
+    >
       <div class="flex h-full flex-col lg:flex-row z-10">
         <div
           class="w-full lg:w-6/12 h-full flex items-end justify-end order-2 lg:order-1"
@@ -385,7 +401,7 @@
     <!-- DIVIDER -->
     <div class="bg-[var(--primary)] w-full h-4"></div>
 
-    <section id="international" class="relative pt-20 pb-0 lg:pt-20">
+    <section id="internacional" class="relative pt-20 pb-0 lg:pt-20">
       <div class="flex h-full flex-col lg:flex-row z-10 gap-x-20">
         <div
           class="w-full lg:w-6/12 h-full flex items-end justify-end order-2 lg:order-1 lg:min-h-[53rem]"

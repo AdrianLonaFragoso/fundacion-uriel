@@ -78,20 +78,31 @@ body {
 
 @layer components {
   .btn-primary {
-    @apply w-full md:max-w-3xl md:min-w-3xs bg-[var(--primary)] rounded-full px-14 py-2 text-white font-bold transition-all hover:opacity-90 hover:scale-110 cursor-pointer;
+    @apply w-full text-center md:max-w-3xl md:min-w-3xs bg-[var(--primary)] rounded-full px-14 py-2 text-white font-bold transition-all hover:opacity-90 hover:scale-110 cursor-pointer;
   }
 
   .btn-secondary {
-    @apply w-full md:max-w-3xl md:min-w-3xs bg-[var(--secondary)] rounded-full px-14 py-2 text-white font-bold transition-all hover:opacity-90 hover:scale-110 cursor-pointer;
+    @apply w-full text-center md:max-w-3xl md:min-w-3xs bg-[var(--secondary)] rounded-full px-14 py-2 text-white font-bold transition-all hover:opacity-90 hover:scale-110 cursor-pointer;
   }
 
   .btn-tertiary {
-    @apply w-full md:max-w-3xl md:min-w-3xs bg-[var(--tertiary)] rounded-full px-14 py-2 text-white font-bold transition-all hover:opacity-90 hover:scale-110 cursor-pointer;
+    @apply w-full text-center md:max-w-3xl md:min-w-3xs bg-[var(--tertiary)] rounded-full px-14 py-2 text-white font-bold transition-all hover:opacity-90 hover:scale-110 cursor-pointer;
   }
 
   .btn-alt {
-    @apply w-full md:max-w-3xl md:min-w-3xs bg-[var(--alt)] rounded-full px-14 py-2 text-white font-bold transition-all hover:opacity-90 hover:scale-110 cursor-pointer;
+    @apply w-full text-center md:max-w-3xl md:min-w-3xs bg-[var(--alt)] rounded-full px-14 py-2 text-white font-bold transition-all hover:opacity-90 hover:scale-110 cursor-pointer;
   }
+}
+
+b {
+  color: var(--primary);
+}
+
+footer b {
+  color: white;
+}
+p {
+  text-align: justify;
 }
 
 .floating-image {

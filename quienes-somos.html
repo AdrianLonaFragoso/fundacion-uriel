@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fundación Uriel | Quienes sómos</title>
+    <link href="./css/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container mx-auto flex justify-center lg:justify-start py-5">
+      <a href="index.html#top">
+        <img
+          src="./img/logo-head.svg"
+          class="w-[100px]"
+          alt="Logo fundación uriel"
+        />
+      </a>
+    </div>
+
+    <header class="flex flex-col sticky top-0 bg-white z-10">
+      <div class="bg-[var(--primary)]">
+        <nav class="text-white w-full container mx-auto py-5 flex">
+          <i class="fas fa-bars ml-5 lg:!hidden" onclick="openSidenav()"></i>
+
+          <div
+            id="sidenav"
+            class="ml-auto fixed lg:relative top-0 -left-80 lg:left-auto w-80 h-full lg:h-fit lg:w-fit bg-[var(--primary)] md:flex shadow-2xl lg:shadow-none p-4 lg:p-0 z-20 transition-all"
+          >
+            <i
+              class="fas fa-times absolute right-4 top-4 flex lg:hidden"
+              onclick="closeSidenav()"
+            ></i>
+
+            <img
+              src="../img/logo-fundacion-uriel-white.svg"
+              alt=""
+              class="w-3xs lg:hidden"
+            />
+
+            <ul class="flex flex-col md:flex-row gap-x-5">
+              <li class="p-3 md:p-0">
+                <a href="index.html#top" onclick="closeSidenav()"> Inicio </a>
+              </li>
+              <li class="p-3 md:p-0">
+                <a href="index.html#acerca" onclick="closeSidenav()">
+                  Nosotros
+                </a>
+              </li>
+              <li class="p-3 md:p-0">
+                <a href="index.html#servicios" onclick="closeSidenav()">
+                  Servicios
+                </a>
+              </li>
+              <li class="p-3 md:p-0">
+                <a href="index.html#reconocimientos" onclick="closeSidenav()">
+                  Reconocimientos
+                </a>
+              </li>
+              <li class="p-3 md:p-0">
+                <a href="index.html#labor" onclick="closeSidenav()">
+                  Nuestra Labor
+                </a>
+              </li>
+              <li class="p-3 md:p-0">
+                <a href="index.html#internacional" onclick="closeSidenav()">
+                  internacional
+                </a>
+              </li>
+              <li class="p-3 md:p-0">
+                <a href="cursos-y-tutoriales.html" onclick="closeSidenav()">
+                  Cursos y tutoriales
+                </a>
+              </li>
+              <li class="p-3 md:p-0">
+                <a href="index.html#contacto" onclick="closeSidenav()">
+                  Contacto
+                </a>
+              </li>
+              <li class="relative mx-10 hidden lg:flex">
+                <button
+                  class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-[var(--secondary)] text-white rounded-full flex items-center justify-center p-5 hover:cursor-pointer hover:scale-110 transition-all"
+                >
+                  Donar
+                </button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container mx-auto py-10 px-10">
+      <div class="flex justify-between mb-10">
+        <div class="flex items-center w-1/2">
+          <img
+            src="./img/flower.svg"
+            class="w-10 lg:w-auto top-1 relative"
+            alt=""
+          />
+          <h1
+            class="text-left text-[var(--secondary)] text-4xl lg:text-6xl font-bold leading-7 lg:leading-14 mr-4"
+          >
+            <small
+              class="text-[var(--primary)] text-2xl lg:text-4xl font-normal"
+              >¿Quiénes
+            </small>
+            <br />
+            Sómos?
+          </h1>
+        </div>
+
+        <div class="flex justify-end items-end w-1/2">
+          <h2
+            class="text-4xl lg:text-6xl font-bold text-[var(--secondary)] leading-4 lg:leading-7 text-right"
+          >
+            <span id="contador">0</span>
+            <b class="text-[var(--primary)] text-2xl lg:text-4xl"
+              >beneficiarios</b
+            >
+          </h2>
+        </div>
+      </div>
+
+      <p class="mb-4">
+        Somos una institución de asistencia privada dedicad a la atención,
+        canalización y prevención de niños con quemaduras principalmente en el
+        Estado de México.
+      </p>
+
+      <p class="mb-10">
+        Además, somos donataria nacional e internacional autorizado, certificado
+        por JAPEM, (Junta de asistencia Privada del Estado de México), con
+        registrado en STPYS como capacitador externo. Fuimos honrados con el
+        Premio Estatal Altruismo en 2022, y nuestro estatus consultivo ante las
+        Naciones Unidas nos ubica entre las 64 organizaciones mexicanas que
+        gozan de esta distinción. Misión Atender a niños, niñas y adolescentes,
+        principalmente con quemaduras o secuelas, canalizarlos a instancias
+        especializadas en México o el extranjero, que cuenten con el tratamiento
+        adecuado y oportuno, promover la cultura de la prevención y capacitar al
+        mayor número de personal médico de emergencias para la correcta atención
+        del paciente quemado. Visión Llegar a ser una institución fuerte,
+        consolidada y de referente en la atención y canalización de niños con
+        quemaduras, así como fuente de consulta en la prevención de quemaduras.
+      </p>
+
+      <img
+        src="img/patronato.png"
+        class="w-full rounded-xl"
+        alt="Foto del patronato con todos sus integrantes"
+      />
+    </main>
+
+    <section class="container mx-auto flex flex-col lg:flex-row px-10">
+      <div class="w-full lg:w-6/12">
+        <h2 class="text-3xl font-bold text-[var(--secondary)]">Patronato:</h2>
+        <p class="mb-5">
+          <b>LDG. M. Patricia Carreño Salinas</b><br />
+          Presidenta Fundadora
+        </p>
+
+        <p class="mb-5">
+          <b> Lic. Sebastían Yakín Millán Carreño </b><br />
+          Secretario General y Representante ante la ONU
+        </p>
+
+        <p class="mb-5">
+          <b> Alma R. Pantel</b><br />
+          Tesorera
+        </p>
+
+        <p class="mb-5">
+          <b> Miltón Muñoz Carcini</b><br />
+          Patronato
+        </p>
+
+        <p class="mb-5">
+          <b> Margarita Yeo Ruíz</b><br />
+          Patronato
+        </p>
+      </div>
+
+      <div class="w-full lg:w-6/12">
+        <h2 class="text-3xl font-bold text-[var(--secondary)]">
+          Colaboradores:
+        </h2>
+        <p class="mb-5">
+          <b>Dr. Omar Avilés Gutiérrez</b><br />
+          Coordinador Médico
+        </p>
+
+        <p class="mb-5">
+          <b> Lic. Miriam Alejandra Rocha Calalpa </b><br />
+          Coordinadora Legal
+        </p>
+
+        <p class="mb-5">
+          <b>Lic. Luis Arturo Cedillo Colín</b><br />
+          Coordinador de Imagen
+        </p>
+
+        <p class="mb-5">
+          <b>Mtra. Claudia Castillo Parra</b><br />
+          Patronato
+        </p>
+
+        <p class="mb-5">
+          <b> Jesica Abigail Mondragón Peralta</b><br />
+          Relaciones Públicas
+        </p>
+
+        <p class="mb-5">
+          <b> Gerardo Carreño Salinas</b><br />
+          Programas
+        </p>
+      </div>
+    </section>
+
+    <section class="relative h-[400px]">
+      <img
+        src="./img/cloud.png"
+        alt=""
+        class="bottom-0 right-0 -z-10 w-[500px] absolute floating-image"
+      />
+    </section>
+
+    <footer id="footer" class="bg-[var(--primary)] text-white relative pt-20">
+      <div
+        class="container mx-auto flex flex-col lg:flex-row justify-center gap-20"
+      >
+        <div
+          class="w-full lg:w-5/12 flex justify-center flex-col px-10 lg:px-0"
+        >
+          <img
+            src="../img/logo-fundacion-uriel-white.svg"
+            class="w-8/12 mb-5"
+            alt=""
+          />
+
+          <p class="text-justify text-base">
+            En Fundación Uriel, trabajamos todos los días
+            para prevenir y combatir las quemaduras, protegiendo la salud y el
+            bienestar de los más pequeños. Gracias a la colaboración de aliados
+            y la solidaridad de quienes nos apoyan, seguimos dando pasos hacia
+            un futuro más seguro y libre de quemaduras.
+          </p>
+        </div>
+
+        <div class="w-full lg:w-5/12 text-base px-10 lg:px-0">
+          <p class="mb-4"><b>Síguenos en :</b></p>
+
+          <div class="flex gap-5 mb-4">
+            <a
+              href="https://www.facebook.com/Fundacionquemaduras"
+              target="_blank"
+            >
+              <img src="../img/facebook.png" alt="" />
+            </a>
+            <a
+              href="https://www.instagram.com/urieliap?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank"
+            >
+              <img src="../img/instagram.png" alt="" />
+            </a>
+
+            <a href="https://x.com/URIELIAP">
+              <img src="../img/x.png" alt="" />
+            </a>
+          </div>
+
+          <p class="mb-4">
+            <b> Dirección:</b> <br />
+            Trompeleros 231, Villa de las Flores, Coacalco, Estado de México,
+            C.P. 55710
+          </p>
+
+          <p>
+            <b>Teléfono:</b> <br />
+            55 1234 5678
+          </p>
+
+          <p>
+            <b>Correo: </b> <br />
+            contacto@fundacionuriel.org
+          </p>
+        </div>
+      </div>
+      <div>
+        <p class="bg-[#485683] p-3 text-center text-sm mt-10">
+          Todos los derechos reservados Fundación Uriel 2025
+        </p>
+      </div>
+    </footer>
+
+    <a
+      id="btnUp"
+      href="#top"
+      class="hidden fixed bottom-4 right-4 bg-[var(--secondary)] text-white px-4 py-2 rounded-full shadow-lg hover:bg-pink-600 transition"
+    >
+      <i class="fas fa-angle-double-up"></i>
+    </a>
+
+    <script
+      src="https://kit.fontawesome.com/a397555a77.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
