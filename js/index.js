@@ -27,6 +27,20 @@ closeSidenav = () => {
   open.classList.add("-left-80");
 };
 
+showDonate = () => {
+  const donateBtn = document.querySelector("#donateCard");
+
+  donateBtn.classList.remove("right-[-450px]");
+  donateBtn.classList.add("right-0");
+};
+
+hideDonate = () => {
+  const donateBtn = document.querySelector("#donateCard");
+
+  donateBtn.classList.add("right-[-450px]");
+  donateBtn.classList.remove("right-0");
+};
+
 const formatNumber = (num) => new Intl.NumberFormat("en-US").format(num);
 
 const animateCounter = (element, start, end, duration) => {
