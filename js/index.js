@@ -69,3 +69,10 @@ const animateCounter = (element, start, end, duration) => {
   const counterElement = document.getElementById("contador");
   await animateCounter(counterElement, 0, 24_407, 2000); // Desde 0 hasta 25,000 en 2s
 })();
+
+getDocumentTransparencia = async (doc) => {
+  if (doc) {
+    const showCaseFrame = document.getElementById("showCaseFrame");
+    showCaseFrame.src = doc;
+  }
+};

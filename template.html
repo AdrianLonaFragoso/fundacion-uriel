@@ -7,7 +7,78 @@
     <link href="./css/output.css" rel="stylesheet" />
   </head>
   <body>
-    <header id="header" class="flex flex-col"></header>
+    <header class="flex flex-col sticky top-0 bg-white z-10">
+      <div class="bg-[var(--primary)]">
+        <nav class="text-white w-full container mx-auto py-5 flex">
+          <i class="fas fa-bars ml-5 lg:!hidden" onclick="openSidenav()"></i>
+
+          <div
+            id="sidenav"
+            class="ml-auto fixed lg:relative top-0 -left-80 lg:left-auto w-80 h-full lg:h-fit lg:w-fit bg-[var(--primary)] md:flex shadow-2xl lg:shadow-none p-4 lg:p-0 z-20 transition-all"
+          >
+            <i
+              class="fas fa-times absolute right-4 top-4 flex lg:hidden"
+              onclick="closeSidenav()"
+            ></i>
+
+            <img
+              src="../img/logo-fundacion-uriel-white.svg"
+              alt=""
+              class="w-3xs lg:hidden"
+            />
+
+            <ul class="flex flex-col md:flex-row gap-x-5">
+              <li class="p-3 md:p-0">
+                <a href="index.html#top" onclick="closeSidenav()"> Inicio </a>
+              </li>
+              <li class="p-3 md:p-0">
+                <a href="index.html#acerca" onclick="closeSidenav()">
+                  Nosotros
+                </a>
+              </li>
+              <li class="p-3 md:p-0">
+                <a href="index.html#servicios" onclick="closeSidenav()">
+                  Servicios
+                </a>
+              </li>
+              <li class="p-3 md:p-0">
+                <a href="index.html#reconocimientos" onclick="closeSidenav()">
+                  Reconocimientos
+                </a>
+              </li>
+              <li class="p-3 md:p-0">
+                <a href="index.html#labor" onclick="closeSidenav()">
+                  Nuestra Labor
+                </a>
+              </li>
+              <li class="p-3 md:p-0">
+                <a href="index.html#internacional" onclick="closeSidenav()">
+                  internacional
+                </a>
+              </li>
+              <li class="p-3 md:p-0">
+                <a href="cursos-y-tutoriales.html" onclick="closeSidenav()">
+                  Cursos y tutoriales
+                </a>
+              </li>
+              <li class="p-3 md:p-0">
+                <a href="index.html#contacto" onclick="closeSidenav()">
+                  Contacto
+                </a>
+              </li>
+              <li class="relative mx-10 hidden lg:flex">
+                <button
+                  onclick="showDonate()"
+                  class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-[var(--secondary)] text-white rounded-full flex items-center justify-center p-5 hover:cursor-pointer hover:scale-110 transition-all"
+                >
+                  Donar
+                </button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
 
     <section class="bg-amber-200 h-screen"></section>
 
