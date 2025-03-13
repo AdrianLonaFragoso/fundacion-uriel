@@ -96,6 +96,7 @@
     </header>
 
     <main
+      id="inicio"
       class="flex flex-col lg:flex-row lg:h-[calc(100vh-150px)] lg:min-h-[calc(100vh-150px)] items-center justify-center bg-banner pt-20 lg:pt-0"
     >
       <div
@@ -198,137 +199,6 @@
     <!-- DIVIDER -->
     <div class="bg-[var(--primary)] w-full h-4"></div>
 
-    <!-- <section id="servicios" class="relative lg:h-fit pt-20 pb-0">
-      <div class="flex flex-col lg:flex-row lg:justify-center">
-        <div class="w-full lg:w-6/12 pb-10">
-          <div class="flex items-center">
-            <img
-              src="./img/flower.svg"
-              class="w-10 lg:w-auto top-1 relative"
-              alt=""
-            />
-            <h1
-              class="text-left text-[var(--secondary)] text-4xl lg:text-6xl font-bold leading-7 lg:leading-14 mr-4"
-            >
-              <small
-                class="text-[var(--primary)] text-2xl lg:text-4xl font-normal"
-                >Nuestros</small
-              >
-              <br />
-              Programas y Servicios
-            </h1>
-          </div>
-
-          <article class="flex gap-5">
-            <div class="flex items-center">
-              <i
-                class="fas fa-chevron-left text-6xl text-[var(--secondary)] sticky top-32"
-              ></i>
-            </div>
-
-            <div id="serviceInfo">
-              <h2 class="mt-10 text-[var(--secondary)] mb-4 text-2xl font-bold">
-                Atención médica especializada
-              </h2>
-
-              <p class="mb-4">
-                Recuperando la autonomía y la confianza después de una quemadura
-              </p>
-
-              <p class="mb-4">
-                En la Fundación Uriel, sabemos que una quemadura no solo deja
-                marcas en la piel, sino también en la vida de quien la sufre.
-                Nuestro compromiso es acompañar a cada persona en su proceso de
-                recuperación, ayudándola a recuperar su autonomía y a
-                reintegrarse a su entorno lo antes posible.
-              </p>
-
-              <p class="mb-4">
-                Cada tratamiento es único y se adapta a la edad, el estado
-                clínico y las necesidades específicas de cada paciente.
-                Brindamos atención ambulatoria a quienes pueden recibir
-                tratamiento fuera del hospital y, en casos de emergencia o
-                secuelas graves, canalizamos a instancias especializadas en
-                México o el extranjero.
-              </p>
-
-              <p class="mb-4">
-                Desde el primer contacto, trabajamos de la mano con
-                especialistas para diseñar un plan de atención integral con
-                objetivos claros, que pueden incluir:
-              </p>
-
-              <ul class="mb-4 list-disc pl-5">
-                <li>Prevención de secuelas funcionales y estéticas.</li>
-                <li>Manejo del dolor.</li>
-                <li>Apoyo psicológico para la persona y su familia.</li>
-                <li>Rehabilitación física y recuperación de la movilidad.</li>
-                <li>Prevención y tratamiento de trastornos psicomotores.</li>
-                <li>Reintegración social, escolar y laboral.</li>
-                <li>Un enfoque integral para una recuperación completa</li>
-              </ul>
-
-              <p class="mb-4">
-                Para alcanzar estos objetivos, ponemos a disposición de cada
-                paciente diversas herramientas y terapias:
-              </p>
-
-              <ul class="mb-4 list-disc pl-5">
-                <li>Fisioterapia especializada.</li>
-                <li>Duchas filiformes para la recuperación de la piel.</li>
-                <li>Uso de prendas de compresión y aparatos ortopédicos.</li>
-                <li>Terapia ocupacional para mejorar la funcionalidad.</li>
-                <li>Cuidados de enfermería.</li>
-                <li>Sesiones de psicomotricidad.</li>
-                <li>Apoyo psicológico y acompañamiento emocional.</li>
-                <li>
-                  Asistencia social para garantizar un regreso seguro a la vida
-                  cotidiana.
-                </li>
-                <li>
-                  Nuestro enfoque es más que médico: es humano. Queremos que
-                  cada persona que ha sufrido una quemadura encuentre en
-                  nosotros un espacio de apoyo, cuidado y esperanza para
-                  reconstruir su vida con dignidad.
-                </li>
-              </ul>
-            </div>
-
-            <div class="flex items-center">
-              <i
-                class="fas fa-chevron-right text-6xl text-[var(--secondary)] sticky top-32"
-              ></i>
-            </div>
-          </article>
-
-          <div
-            id="bullets"
-            class="flex mt-10 items-center justify-center w-full gap-5"
-          >
-            <div class="bg-gray-400 rounded-full h-3 w-3 activeService"></div>
-            <div class="bg-gray-400 rounded-full h-3 w-3"></div>
-            <div class="bg-gray-400 rounded-full h-3 w-3"></div>
-            <div class="bg-gray-400 rounded-full h-3 w-3"></div>
-          </div>
-        </div>
-
-        <div class="w-full lg:w-5/12 flex items-end">
-          <img
-            id="imgService"
-            src="./img/atencion-medica-espcializada.png"
-            class="w-full lg:w-1/2 sticky bottom-0 mx-auto"
-            alt=""
-          />
-        </div>
-      </div>
-
-      <img
-        src="./img/cloud.png"
-        alt=""
-        class="bottom-0 left-0 -z-10 w-[500px] absolute floating-image scale-x-[-1]"
-      />
-    </section> -->
-
     <section id="servicios" class="relative lg:h-fit pt-20 pb-0">
       <div class="flex flex-col lg:flex-row lg:justify-center">
         <div class="w-full lg:w-6/12 pb-10">
@@ -383,7 +253,7 @@
           </div>
         </div>
 
-        <div class="w-full lg:w-5/12 flex items-end">
+        <div class="w-full lg:w-5/12 flex items-end relative -z-10">
           <img
             id="imgService"
             src="./img/atencion-medica-espcializada.png"
@@ -684,6 +554,26 @@
             </div>
 
             <div
+              class="relative w-full before:content-[''] before:absolute before:bg-gray-200 before:h-full before:w-full before:-z-10 before:rounded-full before:-bottom-2 before:-right-2 hover:scale-110 transition-all"
+            >
+              <i
+                class="fas fa-chevron-down absolute top-4 right-4 text-gray-400"
+              ></i>
+              <select
+                class="rounded-full border border-gray-300 px-10 py-3 bg-white w-full text-gray-400 appearance-none"
+              >
+                <option class="text-grey-200" value="Atencion Médica">
+                  Atención médica especializada
+                </option>
+                <option value="Atencion Médica">Prevención</option>
+                <option value="Atencion Médica">
+                  Apoyo a comunidades vulnerables
+                </option>
+                <option value="Atencion Médica">Capacitación Médica</option>
+              </select>
+            </div>
+
+            <div
               class="relative w-full before:content-[''] before:absolute before:bg-gray-200 before:h-full before:w-full before:-z-10 before:rounded-xl before:-bottom-2 before:-right-2 hover:scale-110 transition-all"
             >
               <textarea
@@ -843,194 +733,6 @@
     ></script>
 
     <script src="js/index.js"></script>
-    <script>
-      const slides = [
-        {
-          title: "Atención médica especializada",
-          img: "./img/atencion-medica-espcializada.png",
-          content: `
-
-              <p class="mb-4">
-                Recuperando la autonomía y la confianza después de una quemadura
-              </p>
-
-              <p class="mb-4">
-                En la Fundación Uriel, sabemos que una quemadura no solo deja
-                marcas en la piel, sino también en la vida de quien la sufre.
-                Nuestro compromiso es acompañar a cada persona en su proceso de
-                recuperación, ayudándola a recuperar su autonomía y a
-                reintegrarse a su entorno lo antes posible.
-              </p>
-
-              <p class="mb-4">
-                Cada tratamiento es único y se adapta a la edad, el estado
-                clínico y las necesidades específicas de cada paciente.
-                Brindamos atención ambulatoria a quienes pueden recibir
-                tratamiento fuera del hospital y, en casos de emergencia o
-                secuelas graves, canalizamos a instancias especializadas en
-                México o el extranjero.
-              </p>
-
-              <p class="mb-4">
-                Desde el primer contacto, trabajamos de la mano con
-                especialistas para diseñar un plan de atención integral con
-                objetivos claros, que pueden incluir:
-              </p>
-
-              <ul class="mb-4 list-disc pl-5">
-                <li>Prevención de secuelas funcionales y estéticas.</li>
-                <li>Manejo del dolor.</li>
-                <li>Apoyo psicológico para la persona y su familia.</li>
-                <li>Rehabilitación física y recuperación de la movilidad.</li>
-                <li>Prevención y tratamiento de trastornos psicomotores.</li>
-                <li>Reintegración social, escolar y laboral.</li>
-                <li>Un enfoque integral para una recuperación completa</li>
-              </ul>
-
-              <p class="mb-4">
-                Para alcanzar estos objetivos, ponemos a disposición de cada
-                paciente diversas herramientas y terapias:
-              </p>
-
-              <ul class="mb-4 list-disc pl-5">
-                <li>Fisioterapia especializada.</li>
-                <li>Duchas filiformes para la recuperación de la piel.</li>
-                <li>Uso de prendas de compresión y aparatos ortopédicos.</li>
-                <li>Terapia ocupacional para mejorar la funcionalidad.</li>
-                <li>Cuidados de enfermería.</li>
-                <li>Sesiones de psicomotricidad.</li>
-                <li>Apoyo psicológico y acompañamiento emocional.</li>
-                <li>
-                  Asistencia social para garantizar un regreso seguro a la vida
-                  cotidiana.
-                </li>
-                <li>
-                  Nuestro enfoque es más que médico: es humano. Queremos que
-                  cada persona que ha sufrido una quemadura encuentre en
-                  nosotros un espacio de apoyo, cuidado y esperanza para
-                  reconstruir su vida con dignidad.
-                </li>
-              </ul>
-            `,
-        },
-        {
-          title: "Prevención",
-          img: "./img/nino-prevencion.png",
-          content: `
- <p class="mb-4">
-      "El Fuego No Es Un Juego" es un programa de prevención de quemaduras de la
-      Fundación Uriel, dirigido a niñas, niños, familias y comunidades. A través
-      de talleres interactivos, material educativo y simulaciones, enseñamos
-      cómo prevenir accidentes con fuego y líquidos calientes en el hogar y la
-      escuela.
-    </p>
-
-    <p class="mb-4">
-      Nuestro objetivo es crear una cultura de seguridad, brindando herramientas
-      prácticas para reducir riesgos y actuar correctamente en caso de
-      emergencia.
-    </p>
-
-    <p class="mb-4">
-      Las personas interesadas pueden inscribirse y solicitar una plática
-      completamente gratuita. Además, proporcionamos el Manual de Prevención de
-      Accidentes, una guía con información clave para proteger a niñas y niños
-      de situaciones de riesgo.
-    </p>
-    
-    <p class="mb-4">
-      Juntos, podemos evitar que más personas sufran las dolorosas consecuencias
-      de una quemadura. ¡Prevenir es salvar vidas!
-    </p>
-            
-
-            `,
-        },
-        {
-          title: "Apoyo a comunidades vulnerables",
-          img: "./img/apoyo-comunidades.png",
-          content: `
-            <p class="mb-4">
-      Más de 1,000 familias han recibido alimentos, ropa, juguetes y recursos
-      esenciales para mejorar su calidad de vida. Inscribe a tu comunidad y
-      agendamos una visita.
-    </p>
-
-    <p class="mb-4">
-      Capacitación Médica: Más de 100 especialistas han sido formados en la
-      atención integral del paciente quemado, mejorando los estándares de
-      cuidado médico en el país.
-    </p>
-          `,
-        },
-        {
-          title: "Capacitación médica",
-          img: "./img/capacitacion-medica.png",
-          content: `
-           <p class="mb-4">
-      En la Fundación Uriel, creemos que la clave para brindar una atención de
-      calidad a los sobrevivientes de quemaduras está en la formación continua
-      de los profesionales de la salud. Por ello, ofrecemos programas de
-      capacitación especializada, dirigidos a médicos, enfermeros,
-      fisioterapeutas y otros profesionales del sector.
-    </p>
-
-    <p class="mb-4">
-      Nuestra capacitación se basa en protocolos de atención avanzada para el
-      manejo integral de pacientes con quemaduras, incluyendo el tratamiento de
-      emergencia, control del dolor, rehabilitación física y apoyo psicológico.
-    </p>
-
-    <p class="mb-4">
-      Trabajamos de la mano con expertos nacionales e internacionales para
-      proporcionar herramientas actualizadas en la prevención, tratamiento y
-      reinserción de los pacientes en su entorno.
-    </p>
-
-    <p class="mb-4">
-      A través de talleres, seminarios y formación continua, aseguramos que los
-      especialistas de la salud estén preparados para atender con calidad y
-      empatía a quienes enfrentan este tipo de lesiones.
-    </p>
-          
-          `,
-        },
-      ];
-
-      let currentIndex = 0;
-      const serviceInfo = document.getElementById("serviceInfo");
-      const imgService = document.getElementById("imgService");
-      const bullets = document.querySelectorAll("#bullets div");
-
-      function updateSlide(index, animation) {
-        serviceInfo.classList.remove(
-          "animate__fadeIn",
-          "animate__fadeInLeft",
-          "animate__fadeInRight"
-        );
-        imgService.classList.remove("animate__backInDown");
-        void serviceInfo.offsetWidth; // Forzar reflow para reiniciar la animación
-        serviceInfo.classList.add("animate__animated", animation);
-        imgService.classList.add("animate__animated", "animate__backInDown");
-        serviceInfo.innerHTML = `<h2 class='mt-10 text-[var(--secondary)] mb-4 text-2xl font-bold'>${slides[index].title}</h2>
-          <p class='mb-4'>${slides[index].content}</p>`;
-        imgService.src = slides[index].img;
-        bullets.forEach((b, i) =>
-          b.classList.toggle("activeService", i === index)
-        );
-      }
-
-      document.getElementById("prevSlide").addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        updateSlide(currentIndex, "animate__fadeInLeft");
-      });
-
-      document.getElementById("nextSlide").addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % slides.length;
-        updateSlide(currentIndex, "animate__fadeInRight");
-      });
-
-      updateSlide(currentIndex, "animate__fadeIn");
-    </script>
+    <script></script>
   </body>
 </html>
