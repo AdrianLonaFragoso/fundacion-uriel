@@ -92,6 +92,10 @@ body {
   .btn-alt {
     @apply w-full text-center md:max-w-3xl md:min-w-3xs bg-[var(--alt)] rounded-full px-14 py-2 text-white font-bold transition-all hover:opacity-90 hover:scale-110 cursor-pointer;
   }
+
+  .activeService {
+    @apply !w-7 !bg-[var(--secondary)];
+  }
 }
 
 b {
