@@ -62,15 +62,39 @@
               class="w-3xs lg:hidden"
             />
 
-            <ul class="flex flex-col md:flex-row gap-x-5">
+            <ul class="menu flex flex-col md:flex-row gap-x-5">
               <li class="p-3 md:p-0">
                 <a href="index.html#top" onclick="closeSidenav()"> Inicio </a>
               </li>
-              <li class="p-3 md:p-0">
-                <a href="index.html#acerca" onclick="closeSidenav()">
-                  Nosotros
-                </a>
+
+              <li class="p-3 md:p-0 relative cursor-pointer has-submenu">
+                Nosotros
+                <i class="fas fa-chevron-down !hidden lg:!inline-block"></i>
+
+                <ul
+                  class="submenu bg-[var(--primary)] w-full lg:min-w-[250px] rounded-lg lg:top-10 relative lg:absolute lg:transition-opacity lg:opacity-0 duration-300"
+                >
+                  <li
+                    class="py-3 lg:p-3 hover:bg-[var(--secondary)] transition-all cursor-pointer"
+                    onclick="window.location.href = 'quienes-somos.html'; closeSidenav();"
+                  >
+                    <a> ¿Quiénes somos? </a>
+                  </li>
+                  <li
+                    class="py-3 lg:p-3 hover:bg-[var(--secondary)] transition-all cursor-pointer"
+                    onclick="window.location.href = 'index.html#acerca'; closeSidenav();"
+                  >
+                    <a> Acerca de nosotros </a>
+                  </li>
+                  <li
+                    class="py-3 lg:p-3 hover:bg-[var(--secondary)] transition-all cursor-pointer"
+                    onclick="window.location.href = 'transparencia.html'; closeSidenav();"
+                  >
+                    <a> Portal de transparencia </a>
+                  </li>
+                </ul>
               </li>
+
               <li class="p-3 md:p-0">
                 <a href="index.html#servicios" onclick="closeSidenav()">
                   Servicios
@@ -88,7 +112,7 @@
               </li>
               <li class="p-3 md:p-0">
                 <a href="index.html#internacional" onclick="closeSidenav()">
-                  internacional
+                  Internacional
                 </a>
               </li>
               <li class="p-3 md:p-0">
@@ -103,6 +127,7 @@
               </li>
               <li class="relative mx-10 hidden lg:flex">
                 <button
+                  onclick="showDonate()"
                   class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-[var(--secondary)] text-white rounded-full flex items-center justify-center p-5 hover:cursor-pointer hover:scale-110 transition-all"
                 >
                   Donar
