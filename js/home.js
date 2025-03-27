@@ -65,10 +65,21 @@ const slides = [
               reconstruir su vida con dignidad.
             </li>
           </ul>
+
+          
+          <div class="flex justify-center mt-10">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfEUcHgZKplXNTs91xG_hNnb-mbmAlwn8vgO6PVelGuD5vkFw/viewform"
+              target="_blank"
+              class="btn-secondary max-w-[20rem] mx-auto mb-10"
+            >
+              <i class="fas fa-heart"></i> Solicitar Apoyo
+            </a>
+          </div>
         `,
   },
   {
-    title: "Prevención",
+    title: "Prevención de quemaduras",
     img: "./img/nino-prevencion.png",
     content: `
   <p class="mb-4">
@@ -97,11 +108,20 @@ const slides = [
   de una quemadura. ¡Prevenir es salvar vidas!
   </p>
         
+   <div class="flex justify-center mt-10">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfEUcHgZKplXNTs91xG_hNnb-mbmAlwn8vgO6PVelGuD5vkFw/viewform"
+              target="_blank"
+              class="btn-secondary max-w-[20rem] mx-auto mb-10"
+            >
+              <i class="fas fa-heart"></i> Solicitar Apoyo
+            </a>
+          </div>
   
         `,
   },
   {
-    title: "Apoyo a comunidades vulnerables",
+    title: "Apoyo a Grupos Vulnerables",
     img: "./img/apoyo-comunidades.png",
     content: `
         <p class="mb-4">
@@ -115,10 +135,20 @@ const slides = [
   atención integral del paciente quemado, mejorando los estándares de
   cuidado médico en el país.
   </p>
+
+   <div class="flex justify-center mt-10">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfEUcHgZKplXNTs91xG_hNnb-mbmAlwn8vgO6PVelGuD5vkFw/viewform"
+              target="_blank"
+              class="btn-secondary max-w-[20rem] mx-auto mb-10"
+            >
+              <i class="fas fa-heart"></i> Solicitar Apoyo
+            </a>
+          </div>
       `,
   },
   {
-    title: "Capacitación médica",
+    title: "Capacitación Médica y Formación Comunitaria",
     img: "./img/capacitacion-medica.png",
     content: `
        <p class="mb-4">
@@ -146,6 +176,56 @@ const slides = [
   especialistas de la salud estén preparados para atender con calidad y
   empatía a quienes enfrentan este tipo de lesiones.
   </p>
+
+      <div class="flex justify-center mt-10">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfEUcHgZKplXNTs91xG_hNnb-mbmAlwn8vgO6PVelGuD5vkFw/viewform"
+              target="_blank"
+              class="btn-secondary max-w-[20rem] mx-auto mb-10"
+            >
+              <i class="fas fa-heart"></i> Solicitar Apoyo
+            </a>
+          </div>
+      
+      `,
+  },
+  {
+    title: "⁠Alianzas Internacionales",
+    img: "./img/international-diversity.png",
+    content: `
+     
+      <p>Contamos con el estatus consultivo ante las Naciones Unidas, lo que nos permite contribuir a la Agenda 2030 y generar alianzas estratégicas internacionales para combatir las quemaduras a nivel global.</p>
+      
+
+       <div class="flex justify-center mt-10">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfEUcHgZKplXNTs91xG_hNnb-mbmAlwn8vgO6PVelGuD5vkFw/viewform"
+              target="_blank"
+              class="btn-secondary max-w-[20rem] mx-auto mb-10"
+            >
+              <i class="fas fa-heart"></i> Solicitar Apoyo
+            </a>
+          </div>
+      
+      `,
+  },
+  {
+    title: "⁠Procuración de Fondos",
+    img: "./img/tesoreria.png",
+    content: `
+     
+      <p>Para financiar nuestras operaciones y seguir brindando apoyo a quienes más lo necesitan, organizamos eventos de recaudación de fondos, promovemos la venta de productos con causa y buscamos convenios de colaboracióncon otras instituciones y organizaciones.</p>
+      
+
+      <div class="flex justify-center mt-10">
+        <a
+          href="https://www.paypal.com/donate?hosted_button_id=EFHsZBE47tpNRDWnzJMbRcSzPxrPGyrZIyXyZgO_uQzi9fhLumuI9h7zr0nEk1U0RqcmR8YNdwgcevsa"
+          target="_blank"
+          class="btn-secondary max-w-[20rem] mx-auto mb-10"
+        >
+          <i class="fas fa-heart"></i> Donar
+        </a>
+      </div>
       
       `,
   },
