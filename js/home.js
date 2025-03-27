@@ -24,49 +24,9 @@ const slides = [
             secuelas graves, canalizamos a instancias especializadas en
             México o el extranjero.
           </p>
-  
-          <p class="mb-4">
-            Desde el primer contacto, trabajamos de la mano con
-            especialistas para diseñar un plan de atención integral con
-            objetivos claros, que pueden incluir:
-          </p>
-  
-          <ul class="mb-4 list-disc pl-5">
-            <li>Prevención de secuelas funcionales y estéticas.</li>
-            <li>Manejo del dolor.</li>
-            <li>Apoyo psicológico para la persona y su familia.</li>
-            <li>Rehabilitación física y recuperación de la movilidad.</li>
-            <li>Prevención y tratamiento de trastornos psicomotores.</li>
-            <li>Reintegración social, escolar y laboral.</li>
-            <li>Un enfoque integral para una recuperación completa</li>
-          </ul>
-  
-          <p class="mb-4">
-            Para alcanzar estos objetivos, ponemos a disposición de cada
-            paciente diversas herramientas y terapias:
-          </p>
-  
-          <ul class="mb-4 list-disc pl-5">
-            <li>Fisioterapia especializada.</li>
-            <li>Duchas filiformes para la recuperación de la piel.</li>
-            <li>Uso de prendas de compresión y aparatos ortopédicos.</li>
-            <li>Terapia ocupacional para mejorar la funcionalidad.</li>
-            <li>Cuidados de enfermería.</li>
-            <li>Sesiones de psicomotricidad.</li>
-            <li>Apoyo psicológico y acompañamiento emocional.</li>
-            <li>
-              Asistencia social para garantizar un regreso seguro a la vida
-              cotidiana.
-            </li>
-            <li>
-              Nuestro enfoque es más que médico: es humano. Queremos que
-              cada persona que ha sufrido una quemadura encuentre en
-              nosotros un espacio de apoyo, cuidado y esperanza para
-              reconstruir su vida con dignidad.
-            </li>
-          </ul>
 
-          
+          <p class="text-[var(--secondary)] text-2xl cursor-pointer" onclick="bigInfo()">Ver más >></p>
+
           <div class="flex justify-center mt-10">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSfEUcHgZKplXNTs91xG_hNnb-mbmAlwn8vgO6PVelGuD5vkFw/viewform"
@@ -263,3 +223,75 @@ document.getElementById("nextSlide").addEventListener("click", () => {
 });
 
 updateSlide(currentIndex, "animate__fadeIn");
+
+bigInfo = () => {
+  Swal.fire({
+    title: "Atención médica especializada",
+    html: `
+      <p class="mb-4">Recuperando la autonomía y la confianza después de una quemadura</p>
+      <p class="mb-4">
+        En la Fundación Uriel, sabemos que una quemadura no solo deja
+        marcas en la piel, sino también en la vida de quien la sufre.
+        Nuestro compromiso es acompañar a cada persona en su proceso de
+        recuperación, ayudándola a recuperar su autonomía y a
+        reintegrarse a su entorno lo antes posible.
+      </p>
+  
+      <p class="mb-4">
+        Cada tratamiento es único y se adapta a la edad, el estado
+        clínico y las necesidades específicas de cada paciente.
+        Brindamos atención ambulatoria a quienes pueden recibir
+        tratamiento fuera del hospital y, en casos de emergencia o
+        secuelas graves, canalizamos a instancias especializadas en
+        México o el extranjero.
+      </p>
+  
+      <p class="mb-4">
+        Desde el primer contacto, trabajamos de la mano con
+        especialistas para diseñar un plan de atención integral con
+        objetivos claros, que pueden incluir:
+      </p>
+  
+      <ul class="mb-4 list-disc pl-5 text-left">
+        <li>Prevención de secuelas funcionales y estéticas.</li>
+        <li>Manejo del dolor.</li>
+        <li>Apoyo psicológico para la persona y su familia.</li>
+        <li>Rehabilitación física y recuperación de la movilidad.</li>
+        <li>Prevención y tratamiento de trastornos psicomotores.</li>
+        <li>Reintegración social, escolar y laboral.</li>
+        <li>Un enfoque integral para una recuperación completa.</li>
+      </ul>
+  
+      <p class="mb-4">
+        Para alcanzar estos objetivos, ponemos a disposición de cada
+        paciente diversas herramientas y terapias:
+      </p>
+  
+      <ul class="mb-4 list-disc pl-5 text-left">
+        <li>Fisioterapia especializada.</li>
+        <li>Duchas filiformes para la recuperación de la piel.</li>
+        <li>Uso de prendas de compresión y aparatos ortopédicos.</li>
+        <li>Terapia ocupacional para mejorar la funcionalidad.</li>
+        <li>Cuidados de enfermería.</li>
+        <li>Sesiones de psicomotricidad.</li>
+        <li>Apoyo psicológico y acompañamiento emocional.</li>
+        <li>
+          Asistencia social para garantizar un regreso seguro a la vida
+          cotidiana.
+        </li>
+        <li>
+          Nuestro enfoque es más que médico: es humano. Queremos que
+          cada persona que ha sufrido una quemadura encuentre en
+          nosotros un espacio de apoyo, cuidado y esperanza para
+          reconstruir su vida con dignidad.
+        </li>
+      </ul>
+    `,
+    showCloseButton: true,
+    showConfirmButton: false,
+    icon: null,
+    customClass: {
+      popup: "custom-swal",
+    },
+  });
+};

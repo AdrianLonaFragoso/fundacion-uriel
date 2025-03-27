@@ -1407,6 +1407,15 @@ footer b {
 p {
   text-align: justify;
 }
+.custom-swal {
+  max-width: 800px !important;
+  width: 90%;
+}
+.content-container {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
 .floating-image {
   -webkit-animation-name: imaheder;
   -webkit-animation-duration: 4s;
