@@ -177,13 +177,21 @@ const slides = [
       <p>Para financiar nuestras operaciones y seguir brindando apoyo a quienes más lo necesitan, organizamos eventos de recaudación de fondos, promovemos la venta de productos con causa y buscamos convenios de colaboracióncon otras instituciones y organizaciones.</p>
       
 
-      <div class="flex justify-center mt-10">
+      <div class="flex justify-center mt-10 gap-4">
         <a
+          href="https://www.paypal.com/donate?hosted_button_id=EFHsZBE47tpNRDWnzJMbRcSzPxrPGyrZIyXyZgO_uQzi9fhLumuI9h7zr0nEk1U0RqcmR8YNdwgcevsa"
+          target="_blank"
+          class="btn-alt max-w-[20rem] mx-auto mb-10"
+        >
+          <i class="fas fa-dollar-sign"></i> Donación 
+        </a>
+
+         <a
           href="https://www.paypal.com/donate?hosted_button_id=EFHsZBE47tpNRDWnzJMbRcSzPxrPGyrZIyXyZgO_uQzi9fhLumuI9h7zr0nEk1U0RqcmR8YNdwgcevsa"
           target="_blank"
           class="btn-secondary max-w-[20rem] mx-auto mb-10"
         >
-          <i class="fas fa-heart"></i> Donar
+          <i class="fas fa-heart"></i> Donación artículos
         </a>
       </div>
       

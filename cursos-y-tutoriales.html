@@ -19,14 +19,14 @@
       </a>
     </div>
 
-    <header class="flex flex-col sticky top-0 bg-white z-10">
-      <div class="bg-[var(--tertiary)]">
-        <nav class="text-[var(--primary)] w-full container mx-auto py-5 flex">
+    <header class="flex flex-col sticky top-0 bg-white z-10" onclick="">
+      <div class="bg-[var(--primary)]">
+        <nav class="text-white w-full container mx-auto py-5 flex">
           <i class="fas fa-bars ml-5 lg:!hidden" onclick="openSidenav()"></i>
 
           <div
             id="sidenav"
-            class="ml-auto fixed lg:relative top-0 -left-80 lg:left-auto w-80 h-full lg:h-fit lg:w-fit bg-[var(--tertiary)] md:flex shadow-2xl lg:shadow-none p-4 lg:p-0 z-20 transition-all"
+            class="ml-auto fixed lg:relative top-0 -left-80 lg:left-auto w-80 h-full lg:h-fit lg:w-fit bg-[var(--primary)] md:flex shadow-2xl lg:shadow-none p-4 lg:p-0 z-20 transition-all"
           >
             <i
               class="fas fa-times absolute right-4 top-4 flex lg:hidden"
@@ -39,15 +39,39 @@
               class="w-3xs lg:hidden"
             />
 
-            <ul class="flex flex-col md:flex-row gap-x-5">
+            <ul class="menu flex flex-col md:flex-row gap-x-5">
               <li class="p-3 md:p-0">
                 <a href="index.html#top" onclick="closeSidenav()"> Inicio </a>
               </li>
-              <li class="p-3 md:p-0">
-                <a href="index.html#acerca" onclick="closeSidenav()">
-                  Nosotros
-                </a>
+
+              <li class="p-3 md:p-0 relative cursor-pointer has-submenu">
+                Nosotros
+                <i class="fas fa-chevron-down !hidden lg:!inline-block"></i>
+
+                <ul
+                  class="submenu bg-[var(--primary)] w-full lg:min-w-[250px] rounded-lg lg:top-10 relative lg:absolute lg:transition-opacity lg:opacity-0 duration-300"
+                >
+                  <li
+                    class="py-3 lg:p-3 hover:bg-[var(--secondary)] transition-all cursor-pointer"
+                    onclick="window.location.href = 'quienes-somos.html'; closeSidenav();"
+                  >
+                    <a> ¿Quiénes somos? </a>
+                  </li>
+                  <li
+                    class="py-3 lg:p-3 hover:bg-[var(--secondary)] transition-all cursor-pointer"
+                    onclick="window.location.href = 'index.html#acerca'; closeSidenav();"
+                  >
+                    <a> Acerca de nosotros </a>
+                  </li>
+                  <li
+                    class="py-3 lg:p-3 hover:bg-[var(--secondary)] transition-all cursor-pointer"
+                    onclick="window.location.href = 'transparencia.html'; closeSidenav();"
+                  >
+                    <a> Portal de transparencia </a>
+                  </li>
+                </ul>
               </li>
+
               <li class="p-3 md:p-0">
                 <a href="index.html#servicios" onclick="closeSidenav()">
                   Servicios
@@ -65,7 +89,7 @@
               </li>
               <li class="p-3 md:p-0">
                 <a href="index.html#internacional" onclick="closeSidenav()">
-                  internacional
+                  Internacional
                 </a>
               </li>
               <li class="p-3 md:p-0">
@@ -80,6 +104,7 @@
               </li>
               <li class="relative mx-10 hidden lg:flex">
                 <button
+                  onclick="showDonate()"
                   class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-[var(--secondary)] text-white rounded-full flex items-center justify-center p-5 hover:cursor-pointer hover:scale-110 transition-all"
                 >
                   Donar
@@ -91,7 +116,7 @@
       </div>
     </header>
 
-    <main class="container mx-auto pt-10 pb-5 px-10 lg:px-0">
+    <main class="container mx-auto pt-10 pb-5 px-10">
       <div class="flex flex-col justify-between mb-10">
         <div class="flex items-center w-full">
           <img
@@ -113,36 +138,197 @@
       </div>
     </main>
 
-    <section class="container mx-auto px-10 lg:px-0">
+    <section class="container mx-auto px-10">
       <div class="flex flex-col lg:flex-row">
         <div class="w-full lg:w-8/12 pb-10">
-          <h2 class="text-3xl mb-4">Conferencias, talleres y platicas</h2>
-
           <div class="flex flex-wrap gap-4 mb-4">
-            <img src="./img/videplaceholder.svg" class="w-5/12 lg:w-3/12" />
-            <img src="./img/videplaceholder.svg" class="w-5/12 lg:w-3/12" />
-            <img src="./img/videplaceholder.svg" class="w-5/12 lg:w-3/12" />
-            <img src="./img/videplaceholder.svg" class="w-5/12 lg:w-3/12" />
-            <img src="./img/videplaceholder.svg" class="w-5/12 lg:w-3/12" />
-            <img src="./img/videplaceholder.svg" class="w-5/12 lg:w-3/12" />
-            <img src="./img/videplaceholder.svg" class="w-5/12 lg:w-3/12" />
-            <img src="./img/videplaceholder.svg" class="w-5/12 lg:w-3/12" />
-            <img src="./img/videplaceholder.svg" class="w-5/12 lg:w-3/12" />
+            <div class="w-4/12">
+              <div
+                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm h-full"
+              >
+                <a href="#">
+                  <img
+                    class="rounded-t-lg"
+                    src="./img/manual-prevencion.jpg"
+                    alt=""
+                  />
+                </a>
+                <div class="p-5">
+                  <a href="#">
+                    <h5
+                      class="mb-2 text-xl font-bold tracking-tight text-gray-900"
+                    >
+                      Manual de Prevención
+                    </h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 leading-none">
+                    Este manual proporciona pautas esenciales para la prevención
+                    de quemaduras, incluyendo medidas de seguridad en el hogar,
+                    el manejo adecuado de sustancias calientes y la protección
+                    en ambientes de riesgo, con el fin de reducir la
+                    probabilidad de accidentes y proteger la salud.
+                  </p>
+                  <a
+                    href="docs/MANUAL-DE-PREVENCIÓN.pdf"
+                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+                  >
+                    Ver manual
+                    <svg
+                      class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 14 10"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M1 5h12m0 0L9 1m4 4L9 9"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-4/12">
+              <div
+                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm"
+              >
+                <a href="#">
+                  <img
+                    class="rounded-t-lg"
+                    src="./img/primeros-auxilios-psi.jpg"
+                    alt=""
+                  />
+                </a>
+                <div class="p-5">
+                  <a href="#">
+                    <h5
+                      class="mb-2 text-xl font-bold tracking-tight text-gray-900 text-nowrap"
+                    >
+                      Primeros Auxilios Psicológicos
+                    </h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 leading-none">
+                    Es una técnica de intervención que se aplican a una o varias
+                    personas, que sin importar el tipo de evento, están pasando
+                    un momento estresante.
+                  </p>
+
+                  <p class="mb-3 font-normal text-gray-700 leading-none">
+                    Está técnica se aplica, entre el lapso del evento y la
+                    atención de los primeros auxilios NO Psicológicos (médicos).
+                  </p>
+                  <a
+                    href="docs/PRIMEROS-AUXILIOS-PSICOLOGICOS.pdf"
+                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+                  >
+                    Ver manual
+                    <svg
+                      class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 14 10"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M1 5h12m0 0L9 1m4 4L9 9"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <h2 class="text-3xl mb-4">Presentaciones</h2>
+          <h2 class="text-3xl mb-4">Campaña de prevención de quemaduras</h2>
 
-          <div class="flex flex-wrap gap-4">
-            <img src="./img/presentacion.png" class="w-5/12 lg:w-3/12" />
-            <img src="./img/presentacion.png" class="w-5/12 lg:w-3/12" />
-            <img src="./img/presentacion.png" class="w-5/12 lg:w-3/12" />
-            <img src="./img/presentacion.png" class="w-5/12 lg:w-3/12" />
-            <img src="./img/presentacion.png" class="w-5/12 lg:w-3/12" />
-            <img src="./img/presentacion.png" class="w-5/12 lg:w-3/12" />
-            <img src="./img/presentacion.png" class="w-5/12 lg:w-3/12" />
-            <img src="./img/presentacion.png" class="w-5/12 lg:w-3/12" />
+          <div class="flex gap-4 p-4">
+            <!-- Thumbnail 1 -->
+            <div class="relative w-3/12">
+              <img
+                src="./img/como-prevenir-accidentes.png"
+                class="cursor-pointer w-full object-cover rounded-lg"
+                onclick="openModal('./video/como-prevenir-accidentes.MP4')"
+              />
+            </div>
+            <!-- Thumbnail 2 -->
+            <div class="relative w-3/12">
+              <img
+                src="img/cuidado-en-sala-comedor-y-otras-habitaciones.png"
+                class="cursor-pointer w-full object-cover rounded-lg"
+                onclick="openModal('video/cuidado-en-salas-comedor-y-otras-habitaciones.MP4')"
+              />
+            </div>
+            <!-- Thumbnail 3 -->
+            <div class="relative w-3/12">
+              <img
+                src="img/no-ninos-en-la-cocina.png"
+                class="cursor-pointer w-full object-cover rounded-lg"
+                onclick="openModal('video/no-ninos-en-la-cocina.MP4')"
+              />
+            </div>
+            <!-- Thumbnail 4 -->
+            <div class="relative w-3/12">
+              <img
+                src="img/prevencion-en-el-bano.png"
+                class="cursor-pointer w-full object-cover rounded-lg"
+                onclick="openModal('video/prevencion-en-el-bano.MP4')"
+              />
+            </div>
+            <!-- Thumbnail 5 -->
+            <div class="relative w-3/12">
+              <img
+                src="img/que-hacer-en-caso-de-incendio.png"
+                class="cursor-pointer w-full object-cover rounded-lg"
+                onclick="openModal('video/que-hacer-en-caso-de-incendio.MP4')"
+              />
+            </div>
+          </div>
+
+          <!-- Modal -->
+          <div
+            id="videoModal"
+            class="fixed left-0 top-0 w-screen h-screen bg-black/30 z-50 flex justify-center items-center hidden"
+          >
+            <div
+              class="relative w-3/4 max-w-2xl p-4 bg-[var(--secondary)] rounded-lg"
+            >
+              <button
+                class="absolute -top-3 -right-3 p-2 bg-[var(--secondary)] text-white z-30 rounded-full h-10 w-10 shadow-2xs cursor-pointer"
+                onclick="closeModal()"
+              >
+                X
+              </button>
+              <video id="videoPlayer" controls class="w-full rounded-lg">
+                <source id="videoSource" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         </div>
+
+        <script>
+          openModal = (videoUrl) => {
+            // Set the video source and display the modal
+            document.getElementById("videoSource").src = videoUrl;
+            document.getElementById("videoPlayer").load(); // Reload the video source
+            document.getElementById("videoModal").classList.remove("hidden");
+          };
+
+          closeModal = () => {
+            // Hide the modal and pause the video
+            document.getElementById("videoModal").classList.add("hidden");
+            document.getElementById("videoPlayer").pause();
+          };
+        </script>
 
         <div class="w-full lg:w-4/12 flex items-end">
           <img
