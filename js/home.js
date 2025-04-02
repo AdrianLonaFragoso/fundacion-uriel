@@ -303,3 +303,8 @@ bigInfo = () => {
     },
   });
 };
+
+togglePromos = () => {
+  const promoModal = document.getElementById("promoModal");
+  promoModal.classList.toggle("hidden");
+};
