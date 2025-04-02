@@ -61,16 +61,30 @@ closeSidenav = () => {
   open.classList.add("-left-80");
 };
 
-showDonate = () => {
-  const donateBtn = document.querySelector("#donateCard");
+// showDonate = () => {
+//   const donateBtn = document.querySelector("#donateCard");
 
-  donateBtn.classList.remove("right-[-450px]");
-  donateBtn.classList.add("right-0");
-};
+//   donateBtn.classList.remove("right-[-450px]");
+//   donateBtn.classList.add("right-0");
+// };
 
-hideDonate = () => {
-  const donateBtn = document.querySelector("#donateCard");
+// hideDonate = () => {
+//   const donateBtn = document.querySelector("#donateCard");
 
-  donateBtn.classList.add("right-[-450px]");
-  donateBtn.classList.remove("right-0");
+//   donateBtn.classList.add("right-[-450px]");
+//   donateBtn.classList.remove("right-0");
+// };
+
+openPaypalPopup = (event) => {
+  event.preventDefault();
+  const url = "https://www.paypal.com/donate?hosted_button_id=CQYKVESADGHPW";
+  const width = 500;
+  const height = 700;
+  const left = (window.innerWidth - width) / 2;
+  const top = (window.innerHeight - height) / 2;
+  window.open(
+    url,
+    "PayPal Donation",
+    `width=${width},height=${height},top=${top},left=${left}`
+  );
 };

@@ -108,7 +108,7 @@
               </li>
               <li class="relative mx-10 hidden lg:flex">
                 <button
-                  onclick="showDonate()"
+                  onclick="openPaypalPopup(event)"
                   class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-[var(--secondary)] text-white rounded-full flex items-center justify-center p-5 hover:cursor-pointer hover:scale-110 transition-all"
                 >
                   Donar
@@ -207,7 +207,7 @@
               <!-- <i class="fas fa-plus"></i>  -->
               ¿Quienes sómos?
             </a>
-            <button class="btn-secondary" onclick="showDonate()">
+            <button class="btn-secondary" onclick="openPaypalPopup(event)">
               <i class="far fa-heart"></i> Donar
             </button>
           </div>
@@ -415,7 +415,10 @@
           <div
             class="flex flex-col lg:flex-row justify-start gap-4 lg:gap-10 w-full"
           >
-            <button class="btn-secondary max-w-[20rem]" onclick="showDonate()">
+            <button
+              class="btn-secondary max-w-[20rem]"
+              onclick="openPaypalPopup(event)"
+            >
               <i class="fas fa-praying-hands"></i> Quiero apoyar
             </button>
 
