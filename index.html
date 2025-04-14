@@ -718,16 +718,23 @@
       id="promoModal"
       class="bg-black/65 fixed top-0 left-0 z-50 w-screen h-screen flex items-center justify-center"
     >
-      <div class="relative">
+      <div class="relative flex justify-center">
         <i
-          class="fas fa-times absolute right-4 top-4 flex cursor-pointer"
+          class="fas fa-times absolute -right-2 -top-2 flex cursor-pointer z-20 bg-white p-4 rounded-full h-[50px] w-[50px] items-center justify-center"
           onclick="togglePromos()"
         ></i>
-        <img
-          src="https://placehold.co/600x400?text=Fundacion+Uriel"
-          class="rounded-lg"
-          alt=""
-        />
+        <video
+          id="videoPlayer"
+          controls
+          class="rounded-lg w-[90%] lg:w-[300px]"
+        >
+          <source
+            id="videoSource"
+            src="./video/promo-video.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
       </div>
     </section>
 
