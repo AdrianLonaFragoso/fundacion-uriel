@@ -304,7 +304,13 @@ bigInfo = () => {
   });
 };
 
-togglePromos = () => {
+openPromos = () => {
   const promoModal = document.getElementById("promoModal");
-  promoModal.classList.toggle("hidden");
+  promoModal.classList.remove("hidden");
+};
+
+closePromos = () => {
+  const promoModal = document.getElementById("promoModal");
+  promoModal.classList.add("hidden");
+  document.getElementById("videoPlayer").pause();
 };
