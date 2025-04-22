@@ -151,21 +151,45 @@ const slides = [
   },
   {
     title: "⁠Alianzas Internacionales",
-    img: "./img/international-diversity.png",
+    img: "./img/fundacion-uriel-internacional.png",
     content: `
      
-      <p>Contamos con el estatus consultivo ante las Naciones Unidas, lo que nos permite contribuir a la Agenda 2030 y generar alianzas estratégicas internacionales para combatir las quemaduras a nivel global.</p>
-      
+        <p class="mt-10 text-justify mb-5">
+            Gracias al Estatus Consultivo ante la ONU, la Fundación Uriel
+            impulsa un programa internacional que nos permite colaborar con
+            organismos, hospitales y especialistas de diferentes países para
+            mejorar la atención y rehabilitación de personas con quemaduras.
+          </p>
 
-       <div class="flex justify-center mt-10">
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfEUcHgZKplXNTs91xG_hNnb-mbmAlwn8vgO6PVelGuD5vkFw/viewform"
-              target="_blank"
-              class="btn-secondary max-w-[20rem] mx-auto mb-10"
-            >
-              <i class="fas fa-heart"></i> Solicitar Apoyo
-            </a>
-          </div>
+          <p class="font-bold mb-5">A través de esta iniciativa:</p>
+
+          <p class="text-justify mb-5">
+            Canalizamos a pacientes con secuelas graves a centros especializados
+            en México y el extranjero, asegurando acceso a tratamientos
+            avanzados.
+          </p>
+
+          <p class="text-justify mb-5">
+            Colaboramos con expertos internacionales para la capacitación de
+            profesionales de la salud en nuevas técnicas de recuperación y
+            manejo de quemaduras. Participamos en foros globales y comités
+            especializados, contribuyendo con nuestra experiencia y promoviendo
+            políticas públicas que fortalezcan la prevención y atención de
+            quemaduras.
+          </p>
+
+          <p class="text-justify mb-5">
+            Desarrollamos alianzas con organizaciones internacionales para
+            ampliar el impacto de nuestros programas y garantizar una atención
+            integral.
+          </p>
+
+          <p class="text-justify mb-5">
+            Este programa refuerza nuestro compromiso de brindar soluciones
+            innovadoras y mejorar la calidad de vida de quienes han sufrido
+            quemaduras, trascendiendo fronteras con un enfoque humano y
+            especializado.
+          </p>
       
       `,
   },
