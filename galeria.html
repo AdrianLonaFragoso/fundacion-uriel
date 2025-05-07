@@ -155,62 +155,78 @@
         </div>
       </div>
     </main>
-
     <div class="container mx-auto">
-      <div id="gallery" class="masonry">
-        <!-- Las imágenes se insertarán aquí dinámicamente -->
+      <div id="gallery" class="flex flex-wrap justify-center gap-4">
+        <!-- Imágenes generadas dinámicamente -->
       </div>
     </div>
 
     <!-- Lightbox -->
     <div
       id="lightbox"
-      class="fixed top-0 left-0 w-full h-full bg-black/55 flex justify-center items-center hidden z-50"
+      class="fixed top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center hidden z-50"
     >
-      <img id="lightbox-img" class="max-w-full max-h-full rounded-lg" />
-      <button
-        onclick="closeLightbox()"
-        class="absolute top-4 right-4 text-white text-2xl"
-      >
-        &times;
-      </button>
+      <div class="relative flex items-center gap-4">
+        <!-- Flecha Izquierda -->
+        <button
+          onclick="prevImage()"
+          class="text-white text-4xl font-bold cursor-pointer px-2"
+        >
+          &#10094;
+        </button>
+
+        <!-- Imagen Principal -->
+        <img
+          id="lightbox-img"
+          class="w-[800px] max-h-[90vh] object-contain rounded-lg"
+        />
+
+        <!-- Flecha Derecha -->
+        <button
+          onclick="nextImage()"
+          class="text-white text-4xl font-bold cursor-pointer px-2"
+        >
+          &#10095;
+        </button>
+
+        <!-- Botón Cerrar -->
+        <button
+          onclick="closeLightbox()"
+          class="absolute top-2 right-2 text-white text-4xl font-bold cursor-pointer"
+        >
+          &times;
+        </button>
+      </div>
     </div>
 
     <script>
-      const images = [
-        "https://placehold.co/300x400",
-        "https://placehold.co/300x500",
-        "https://placehold.co/400x400",
-        "https://placehold.co/500x600",
-        "https://placehold.co/600x500",
-        "https://placehold.co/400x600",
-        "https://placehold.co/300x300",
-        "https://placehold.co/450x500",
-        "https://placehold.co/500x400",
-        "https://placehold.co/350x550",
-        "https://placehold.co/450x650",
-        "https://placehold.co/550x350",
-      ];
-
+      const images = Array.from(
+        { length: 69 },
+        (_, i) => `./img/galeria/${i + 1}.jpg`
+      );
       const gallery = document.getElementById("gallery");
+      let currentIndex = 0;
 
       function loadGallery() {
-        images.forEach((src) => {
+        images.forEach((src, index) => {
           const container = document.createElement("div");
-          container.className = "masonry-item shadow-md cursor-pointer";
-          container.onclick = () => openLightbox(src);
+          container.className =
+            "w-[200px] h-[200px] bg-gray-100 flex items-center justify-center shadow-md overflow-hidden cursor-pointer";
+          container.onclick = () => openLightbox(index);
 
           const img = document.createElement("img");
           img.src = src;
+          img.className = "max-w-full max-h-full object-contain";
           img.loading = "lazy";
-          container.appendChild(img);
 
+          container.appendChild(img);
           gallery.appendChild(container);
         });
       }
 
-      function openLightbox(src) {
-        document.getElementById("lightbox-img").src = src;
+      function openLightbox(index) {
+        currentIndex = index;
+        document.getElementById("lightbox-img").src = images[currentIndex];
         document.getElementById("lightbox").classList.remove("hidden");
       }
 
@@ -218,9 +234,41 @@
         document.getElementById("lightbox").classList.add("hidden");
       }
 
+      function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        document.getElementById("lightbox-img").src = images[currentIndex];
+      }
+
+      function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        document.getElementById("lightbox-img").src = images[currentIndex];
+      }
+
+      // Atajos de teclado
+      document.addEventListener("keydown", (e) => {
+        if (document.getElementById("lightbox").classList.contains("hidden"))
+          return;
+
+        switch (e.key) {
+          case "Escape":
+            closeLightbox();
+            break;
+          case "ArrowRight":
+            nextImage();
+            break;
+          case "ArrowLeft":
+            prevImage();
+            break;
+        }
+      });
+
       loadGallery();
     </script>
-    <footer id="footer" class="bg-[var(--primary)] text-white relative pt-20">
+
+    <footer
+      id="footer"
+      class="bg-[var(--primary)] text-white relative pt-20 mt-10"
+    >
       <div
         class="container mx-auto flex flex-col lg:flex-row justify-center gap-20"
       >
