@@ -18,7 +18,7 @@
       </a>
     </div>
 
-    <header class="flex flex-col sticky top-0 bg-white z-10">
+    <header class="flex flex-col sticky top-0 bg-white z-10" onclick="">
       <div class="bg-[var(--primary)]">
         <nav class="text-white w-full container mx-auto p-5 flex">
           <i class="fas fa-bars ml-5 lg:!hidden" onclick="openSidenav()"></i>
@@ -67,6 +67,12 @@
                     onclick="window.location.href = 'transparencia.html'; closeSidenav();"
                   >
                     <a> Portal de transparencia </a>
+                  </li>
+                  <li
+                    class="py-3 lg:p-3 hover:bg-[var(--secondary)] transition-all cursor-pointer"
+                    onclick="window.location.href = 'galeria.html'; closeSidenav();"
+                  >
+                    <a>Galería </a>
                   </li>
                 </ul>
               </li>
