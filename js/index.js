@@ -1,36 +1,70 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("it works!");
   const dropdowns = document.querySelectorAll(".has-submenu");
-
   let timeoutId;
 
-  dropdowns.forEach((dropdown) => {
-    const submenu = dropdown.querySelector(".submenu");
+  // Check if screen is desktop (lg breakpoint and above)
+  const isDesktop = () => window.innerWidth >= 1024; // Tailwind's lg breakpoint is 1024px
 
-    dropdown.addEventListener("mouseenter", () => {
-      clearTimeout(timeoutId);
-      submenu.classList.remove("lg:hidden", "lg:opacity-0");
-      submenu.classList.add("lg:block", "lg:opacity-100");
-    });
+  const setupDropdowns = () => {
+    dropdowns.forEach((dropdown) => {
+      const submenu = dropdown.querySelector(".submenu");
+      
+      // Remove existing event listeners to prevent duplicates
+      dropdown.removeEventListener("mouseenter", handleMouseEnter);
+      dropdown.removeEventListener("mouseleave", handleMouseLeave);
+      if (submenu) {
+        submenu.removeEventListener("mouseenter", handleSubmenuEnter);
+        submenu.removeEventListener("mouseleave", handleSubmenuLeave);
+      }
 
-    dropdown.addEventListener("mouseleave", () => {
-      timeoutId = setTimeout(() => {
-        submenu.classList.add("lg:hidden", "lg:opacity-0");
-        submenu.classList.remove("lg:block", "lg:opacity-100");
-      }, 200);
+      // Only add event listeners for desktop
+      if (isDesktop()) {
+        dropdown.addEventListener("mouseenter", handleMouseEnter);
+        dropdown.addEventListener("mouseleave", handleMouseLeave);
+        if (submenu) {
+          submenu.addEventListener("mouseenter", handleSubmenuEnter);
+          submenu.addEventListener("mouseleave", handleSubmenuLeave);
+        }
+      }
     });
+  };
 
-    submenu.addEventListener("mouseenter", () => {
-      clearTimeout(timeoutId);
-    });
+  const handleMouseEnter = (e) => {
+    if (!isDesktop()) return;
+    const submenu = e.currentTarget.querySelector(".submenu");
+    clearTimeout(timeoutId);
+    submenu?.classList.remove("lg:hidden", "lg:opacity-0");
+    submenu?.classList.add("lg:block", "lg:opacity-100");
+  };
 
-    submenu.addEventListener("mouseleave", () => {
-      timeoutId = setTimeout(() => {
-        submenu.classList.add("lg:hidden", "opacity-0");
-        submenu.classList.remove("opacity-100");
-      }, 200);
-    });
-  });
+  const handleMouseLeave = (e) => {
+    if (!isDesktop()) return;
+    const submenu = e.currentTarget.querySelector(".submenu");
+    timeoutId = setTimeout(() => {
+      submenu?.classList.add("lg:hidden", "lg:opacity-0");
+      submenu?.classList.remove("lg:block", "lg:opacity-100");
+    }, 200);
+  };
+
+  const handleSubmenuEnter = (e) => {
+    if (!isDesktop()) return;
+    clearTimeout(timeoutId);
+  };
+
+  const handleSubmenuLeave = (e) => {
+    if (!isDesktop()) return;
+    timeoutId = setTimeout(() => {
+      e.currentTarget.classList.add("lg:hidden", "opacity-0");
+      e.currentTarget.classList.remove("opacity-100");
+    }, 200);
+  };
+
+  // Initial setup
+  setupDropdowns();
+
+  // Update on window resize
+  window.addEventListener('resize', setupDropdowns);
 });
 
 const toggleButtonVisibility = () => {
