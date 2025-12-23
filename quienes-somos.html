@@ -78,6 +78,12 @@
                   >
                     <a>Galería </a>
                   </li>
+                  <li
+                    class="py-3 lg:p-3 hover:bg-[var(--secondary)] transition-all cursor-pointer"
+                    onclick="window.location.href = 'index.html#reconocimientos'; closeSidenav();"
+                  >
+                    <a> Reconocimientos </a>
+                  </li>
                 </ul>
               </li>
 
@@ -86,11 +92,23 @@
                   Programas
                 </a>
               </li>
-              <li class="p-3 md:p-0">
-                <a href="index.html#reconocimientos" onclick="closeSidenav()">
-                  Reconocimientos
-                </a>
+
+              <li class="p-3 md:p-0 relative cursor-pointer has-submenu">
+                Tratamientos
+                <i class="fas fa-chevron-down !hidden lg:!inline-block"></i>
+
+                <ul
+                  class="submenu bg-[var(--primary)] w-full lg:min-w-[250px] rounded-lg lg:top-10 relative lg:absolute lg:transition-opacity lg:opacity-0 duration-300"
+                >
+                  <li
+                    class="py-3 lg:p-3 hover:bg-[var(--secondary)] transition-all cursor-pointer"
+                    onclick="window.location.href = 'tratamiento-laser-co2.html'; closeSidenav();"
+                  >
+                    <a> Tratamiento Laser CO2 </a>
+                  </li>
+                </ul>
               </li>
+
               <li class="p-3 md:p-0">
                 <a href="index.html#labor" onclick="closeSidenav()">
                   Nuestra Labor
