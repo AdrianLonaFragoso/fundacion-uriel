@@ -217,6 +217,72 @@
           <div class="flex flex-wrap gap-4 mb-4">
             <div class="w-full lg:w-4/12">
               <div
+                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm h-full relative"
+              >
+                <span
+                  id="badge-nuevo-nahuatl"
+                  data-expira="2026-10-30"
+                  class="absolute top-3 right-3 z-10 bg-[var(--secondary)] text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg uppercase tracking-wide"
+                >
+                  Nuevo
+                </span>
+                <a
+                  href="docs/manual-prevencion-nahuatl.pdf"
+                  target="_blank" rel="noopener noreferrer"
+                >
+                  <img
+                    class="rounded-t-lg"
+                    src="./img/manual-prevencion-nahuatl.jpg"
+                    alt="Portada del Manual de Prevención y Primeros Auxilios en Náhuatl de Fundación Uriel"
+                    loading="lazy"
+                  />
+                </a>
+                <div class="p-5">
+                  <a
+                    href="docs/manual-prevencion-nahuatl.pdf"
+                    target="_blank" rel="noopener noreferrer"
+                  >
+                    <h3
+                      class="mb-2 text-xl font-bold tracking-tight text-gray-900"
+                    >
+                      Manual de Prevención y Primeros Auxilios en Náhuatl
+                    </h3>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 leading-none">
+                    Versión en náhuatl (huasteca de Hidalgo) realizada con la
+                    UNAM FES Acatlán. Explica con ilustraciones cómo prevenir
+                    quemaduras en cocina, baño y hogar, qué hacer ante una
+                    quemadura y primeros auxilios psicológicos, para llevar la
+                    prevención a comunidades indígenas.
+                  </p>
+                  <a
+                    href="docs/manual-prevencion-nahuatl.pdf"
+                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+                    target="_blank" rel="noopener noreferrer"
+                  >
+                    Ver manual
+                    <svg
+                      class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 14 10"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M1 5h12m0 0L9 1m4 4L9 9"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full lg:w-4/12">
+              <div
                 class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm h-full"
               >
                 <a href="#">
@@ -298,65 +364,6 @@
                   </p>
                   <a
                     href="docs/PRIMEROS_AUXILIOS_PSICOLOGICOS.pdf"
-                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
-                    target="_blank" rel="noopener noreferrer"
-                  >
-                    Ver manual
-                    <svg
-                      class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 14 10"
-                    >
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M1 5h12m0 0L9 1m4 4L9 9"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="w-full lg:w-4/12">
-              <div
-                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm h-full"
-              >
-                <a
-                  href="docs/manual-prevencion-nahuatl.pdf"
-                  target="_blank" rel="noopener noreferrer"
-                >
-                  <img
-                    class="rounded-t-lg"
-                    src="./img/manual-prevencion-nahuatl.jpg"
-                    alt="Portada del Manual de Prevención y Primeros Auxilios en Náhuatl de Fundación Uriel"
-                    loading="lazy"
-                  />
-                </a>
-                <div class="p-5">
-                  <a
-                    href="docs/manual-prevencion-nahuatl.pdf"
-                    target="_blank" rel="noopener noreferrer"
-                  >
-                    <h3
-                      class="mb-2 text-xl font-bold tracking-tight text-gray-900"
-                    >
-                      Manual de Prevención y Primeros Auxilios en Náhuatl
-                    </h3>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 leading-none">
-                    Versión en náhuatl (huasteca de Hidalgo) realizada con la
-                    UNAM FES Acatlán. Explica con ilustraciones cómo prevenir
-                    quemaduras en cocina, baño y hogar, qué hacer ante una
-                    quemadura y primeros auxilios psicológicos, para llevar la
-                    prevención a comunidades indígenas.
-                  </p>
-                  <a
-                    href="docs/manual-prevencion-nahuatl.pdf"
                     class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
                     target="_blank" rel="noopener noreferrer"
                   >
@@ -462,6 +469,14 @@
             document.getElementById("videoModal").classList.add("hidden");
             document.getElementById("videoPlayer").pause();
           };
+
+          // Badge "Nuevo" temporal: solo quita el distintivo, el manual se queda permanente
+          (function () {
+            var badge = document.getElementById("badge-nuevo-nahuatl");
+            if (!badge) return;
+            var expira = new Date(badge.dataset.expira + "T23:59:59");
+            if (new Date() > expira) badge.remove();
+          })();
         </script>
 
         <div class="w-full lg:w-4/12 flex items-end">
