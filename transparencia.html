@@ -624,6 +624,19 @@
                     >
                       2024
                     </li>
+                    <li
+                      class="p-3 border-b-2 border-gray-400 hover:border-[var(--secondary)] cursor-pointer hover:font-black hover:text-[var(--secondary)] transition-all"
+                      onclick='getDocumentTransparencia("https://drive.google.com/file/d/1cFFrzKijJsvAqHim_9LnrD8DMtpFdanQ/preview")'
+                    >
+                      <span class="flex items-center justify-between w-full">
+                        2025
+                        <span
+                          class="badge-nuevo-transparencia bg-[var(--secondary)] text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide shadow"
+                          data-expira="2026-10-30"
+                          >Nuevo</span
+                        >
+                      </span>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -852,6 +865,19 @@
                       onclick='getDocumentTransparencia("https://drive.google.com/file/d/1LRVA6b4eB6zthdCEk6MOzrduTItZgRo0/preview")'
                     >
                       2024
+                    </li>
+                    <li
+                      class="p-3 border-b-2 border-gray-400 hover:border-[var(--secondary)] cursor-pointer hover:font-black hover:text-[var(--secondary)] transition-all"
+                      onclick='getDocumentTransparencia("https://drive.google.com/file/d/1lbCpeIK4eLfAXf0SHWFNWb2e6MdkOmOf/preview")'
+                    >
+                      <span class="flex items-center justify-between w-full">
+                        2025
+                        <span
+                          class="badge-nuevo-transparencia bg-[var(--secondary)] text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide shadow"
+                          data-expira="2026-10-30"
+                          >Nuevo</span
+                        >
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -1140,5 +1166,16 @@
 
     <script src="./js/index.js"></script>
     <script src="./js/transparencial.js"></script>
+    <script>
+      // Badges "Nuevo" temporales transparencia: solo quitan el distintivo, los <li> 2025 se quedan
+      (function () {
+        var hoy = new Date();
+        document
+          .querySelectorAll(".badge-nuevo-transparencia")
+          .forEach(function (b) {
+            if (hoy > new Date(b.dataset.expira + "T23:59:59")) b.remove();
+          });
+      })();
+    </script>
   </body>
 </html>
